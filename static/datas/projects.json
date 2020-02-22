@@ -1,0 +1,14 @@
+{
+  "projects":
+  {
+    "id": 1,
+    "slug": "labfive",
+    "title": "LabFive",
+    "type": "UI Design",
+    "color": "#4BD079",
+    "year": "2019 projet d'école",
+    "skills": "Adobe XD / Photoshop / Illustrator",
+    "pitch": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex e",
+    "solution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.\n\nVoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non"
+  }
+}

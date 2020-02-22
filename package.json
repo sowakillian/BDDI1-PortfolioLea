@@ -1,0 +1,29 @@
+{
+  "name": "portfolio-lea",
+  "version": "1.0.0",
+  "description": "Portfolio de Léa Pradel",
+  "author": "Sowa Killian",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxtjs/prismic": "^1.1.0",
+    "axios": "^0.19.2",
+    "nuxt": "^2.0.0",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.1.5"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vue-jest": "^4.0.0-0"
+  }
+}

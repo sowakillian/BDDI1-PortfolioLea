@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "GTWalsheim-Bold";
+  src: url("../fonts/GTWalsheim-Bold.TTF"),
+}
+
+@font-face {
+  font-family: "GTWalsheim-Regular";
+  src: url("../fonts/GTWalsheim-Regular.ttf"),
+}
+
+body {
+  font-family: 'GTWalsheim-Bold';
+  background-image: url("../background-header.jpg");
+  background-attachment: fixed;
+  overflow-x: hidden;
+
+  a, a:visited {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  margin-top: -120px;
+  padding-top: 120px;
+  z-index: 1;
+}
+
+.color-red {
+  color: #FF4E50;
+}
+
+strong {
+  font-family: GTWalsheim-Bold;
+}
