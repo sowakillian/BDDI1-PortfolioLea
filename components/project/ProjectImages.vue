@@ -1,5 +1,5 @@
 <template>
-  <div class="project-images">
+  <div class="project-images" :style="{ backgroundColor: color }">
     <div class="project-images-phonemockup">
       <span class="project-images-phonemockup-img">
         <img src="~/assets/images/projects/labfive-phonemockup.png">
@@ -15,12 +15,15 @@
 </template>
 
 <script>
-
+    export default {
+        props: [
+            'color'
+        ]
+    };
 </script>
 
 <style lang="scss">
   .project-images {
-    background-color: #4BD079;
     padding-top: 80px;
     display: flex;
     justify-content: flex-end;

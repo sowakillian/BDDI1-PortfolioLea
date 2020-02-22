@@ -2,7 +2,7 @@ import axios from 'axios'
 <template>
   <div class="project-description">
     <div class="project-description-pitch">
-      <div class="project-description-title">
+      <div class="project-description-title" :style="{ color: color }">
         pitch
       </div>
       <div v-html="pitch" class="project-description-text">
@@ -10,7 +10,7 @@ import axios from 'axios'
       </div>
     </div>
     <div class="project-description-solution">
-      <div class="project-description-title">
+      <div class="project-description-title" :style="{ color: `${color}` }">
         solution
       </div>
       <div v-html="solution" class="project-description-text">
@@ -24,9 +24,10 @@ import axios from 'axios'
     export default {
         props: [
             'pitch',
-            'solution'
+            'solution',
+            'color'
         ]
-    }
+    };
 </script>
 
 <style lang="scss">

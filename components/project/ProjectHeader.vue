@@ -1,9 +1,9 @@
 
 <template>
-  <div class="project-header">
+  <div class="project-header" :style="{ backgroundImage: `url('${background}')` }">
     <div class="project-header-content">
       <span class="project-header-content-title">{{ title }} - <span class="project-header-content-title-type">{{ type }}</span></span>
-      <p>2019 projet d'école</p>
+      <p>{{ year }}</p>
     </div>
   </div>
 </template>
@@ -12,15 +12,17 @@
     export default {
         props: [
             'title',
-            'type'
+            'type',
+            'year',
+            'background',
         ]
     }
+
 </script>
 
 <style lang="scss">
 
   .project-header {
-    background-color: green;
     height: 100vh;
     width: 100%;
     padding: 0 5% 0 5%;
