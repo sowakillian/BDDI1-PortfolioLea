@@ -2,14 +2,14 @@
   <div class="project-images" :style="{ backgroundColor: color }">
     <div class="project-images-phonemockup">
       <span class="project-images-phonemockup-img">
-        <img src="~/assets/images/projects/labfive-phonemockup.png">
+        <img :src="phonemockup" />
         <span class="project-images-phonemockup-img-skills">
-          Adobe XD / Photoshop / Illustrator
+          {{ skills }}
         </span>
       </span>
     </div>
     <div class="project-images-deskmockup">
-      <img src="~/assets/images/projects/labfive-deskscreen.png">
+      <img :src="deskmockup" />
     </div>
   </div>
 </template>
@@ -17,7 +17,10 @@
 <script>
     export default {
         props: [
-            'color'
+            'color',
+            'skills',
+            'deskmockup',
+            'phonemockup'
         ]
     };
 </script>

@@ -68,11 +68,11 @@ export default {
       // Fetch again all the blog posts, but this time generating each post's page
       const projectItems = initApi().then(api => {
         return api
-          .query(Prismic.Predicates.at('document.type', 'project'))
+          .query(Prismic.Predicates.at('document.type', 'projects'))
           .then(response => {
             return response.results.map(payload => {
               return {
-                route: `/project/${payload.uid}`,
+                route: `/projects/${payload.uid}`,
                 payload
               }
             })

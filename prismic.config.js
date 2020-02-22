@@ -12,7 +12,7 @@ export const initApi = req => {
 };
 
 export const linkResolver = doc => {
-  if (doc.type === 'project') return `/project/${doc.uid}`
+  if (doc.type === 'projects') return `/projects/${doc.uid}`
   return `/${doc.uid}`
 };
 
@@ -25,9 +25,9 @@ export const generatePageData = (documentType, data) => {
         socials: PrismicDOM.RichText.asHtml(data.socials),
         localisation: PrismicDOM.RichText.asHtml(data.localisation),
       };
-    case 'blog_page':
+    case 'project_page':
       return {
-        posts: data
+        projects: data
       };
     case 'project':
       return {
@@ -36,8 +36,11 @@ export const generatePageData = (documentType, data) => {
         pitch: PrismicDOM.RichText.asText(data.pitch),
         solution: PrismicDOM.RichText.asText(data.pitch),
         year: PrismicDOM.RichText.asText(data.year),
+        skills: PrismicDOM.RichText.asText(data.skills),
         background: data.background.url,
         color: data.color,
+        phonemockup: data.phonemockup.url,
+        deskmockup: data.deskmockup.url,
       }
   }
 }
