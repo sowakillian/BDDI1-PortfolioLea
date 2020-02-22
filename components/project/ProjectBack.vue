@@ -1,6 +1,6 @@
 
 <template>
-    <nuxt-link to="/" class="project-back">
+    <nuxt-link to="/projects" class="project-back">
       <span class="project-back-arrow"><img src="~/assets/images/icon-back.svg"></span>
       <span class="project-back-text">Retour aux projets</span>
     </nuxt-link>

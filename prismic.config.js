@@ -27,7 +27,7 @@ export const generatePageData = (documentType, data) => {
       };
     case 'project_page':
       return {
-        projects: data
+        projects: data,
       };
     case 'project':
       return {

@@ -2,7 +2,7 @@
   <div class="nav">
     <div class="nav-logo"><nuxt-link to="/">//</nuxt-link></div>
     <ul class="nav-list">
-      <li><nuxt-link to="/project">projets</nuxt-link></li>
+      <li><nuxt-link to="/projects">projets</nuxt-link></li>
       <li><a href="#lea">/éa</a></li>
       <li><a href="#contact">contact</a></li>
     </ul>
