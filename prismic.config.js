@@ -2,7 +2,7 @@ import Prismic from 'prismic-javascript'
 import PrismicDOM from 'prismic-dom'
 
 const config = {
-  baseUrl: 'https://portfolio-leapradel.cdn.prismic.io/api/v2',
+  baseUrl: 'https://leapradel-portfolio.cdn.prismic.io/api/v2',
 };
 
 export const initApi = req => {

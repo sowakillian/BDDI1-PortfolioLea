@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import ProjectSlider from '~/components/ProjectSlider.vue';
+  import ProjectSlider from '~/components/project/ProjectSlider.vue';
 
   export default {
       components: {

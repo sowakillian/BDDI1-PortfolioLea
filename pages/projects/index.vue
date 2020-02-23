@@ -1,13 +1,15 @@
 <template>
   <div class="container">
-    <h1>projets</h1>
+    <h1 class="projectpage-title">projets</h1>
 
     <ul class="project-list">
-      <li class="project" :style="{ backgroundColor: project.data.color }" v-for="(project, index) in projects" :key="index">
-        <nuxt-link :to="`/projects/${project.uid}`" class="project-phone">
-          <img class="project-phone-img" :src="project.data.phonemockup.url" />
-          <span class="project-more"><span class="project-more-text">voir le projet</span></span>
-        </nuxt-link>
+      <li v-for="(project, index) in projects" :key="index" v-scroll-reveal>
+        <div class="project" :style="{ backgroundColor: project.data.color }">
+          <nuxt-link :to="`/projects/${project.uid}`" class="project-phone">
+            <img class="project-phone-img" :src="project.data.phonemockup.url" />
+            <span class="project-more"><span class="project-more-symbol">+</span><span class="project-more-text">voir le projet</span></span>
+          </nuxt-link>
+        </div>
       </li>
     </ul>
 
@@ -38,12 +40,14 @@
                         })
                 })
             }
-        }
+        },
+
+
     }
 </script>
 
 <style lang="scss">
-  h1 {
+  .projectpage-title {
     font-size: 100px;
     margin-top: 130px;
     margin-left: 190px;
@@ -52,9 +56,15 @@
     display: flex;
     justify-content: space-around;
     margin: 100px 10%;
+    flex-wrap: wrap;
 
-    li:nth-of-type(odd) {
-      margin-top: 300px;
+    li {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      &:nth-of-type(odd) {
+        margin-top: 300px;
+      }
     }
   }
 
@@ -85,6 +95,16 @@
      right: -5px;
      bottom: -5px;
      background-color: #212121;
+
+    &-symbol {
+      color: white;
+      position: absolute;
+      font-size: 60px;
+      font-family: GTWalsheim-Regular;
+      left: 45%;
+      top: 40%;
+      transform: translate(-50%, -50%) rotate(-23deg);
+    }
 
   &-text {
      color: #212121;

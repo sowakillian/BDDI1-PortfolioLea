@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import HomeHeader from '~/components/HomeHeader.vue'
-import HomeAbout from "../components/HomeAbout";
-import HomeContact from "../components/HomeContact";
+import HomeHeader from '~/components/home/HomeHeader.vue'
+import HomeAbout from "../components/home/HomeAbout";
+import HomeContact from "../components/home/HomeContact";
 import Prismic from 'prismic-javascript'
 import { initApi, generatePageData } from '@/prismic.config'
 

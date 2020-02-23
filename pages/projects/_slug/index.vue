@@ -14,6 +14,7 @@
     import ProjectImages from '~/components/project/ProjectImages.vue'
     import Prismic from 'prismic-javascript'
     import { initApi, generatePageData } from '@/prismic.config'
+    import axios from 'axios'
 
     export default {
         components: {
@@ -35,7 +36,8 @@
                         })
                 })
             }
-        }
+        },
+
     }
 </script>
 

@@ -7,10 +7,11 @@
 </template>
 
 <script>
-import GlobalFooter from '~/components/GlobalFooter.vue'
-import GlobalHeader from '~/components/GlobalHeader.vue'
+import GlobalFooter from '~/components/globals/GlobalFooter.vue'
+import GlobalHeader from '~/components/globals/GlobalHeader.vue'
 
 export default {
+
   components: {
     GlobalHeader,
     GlobalFooter,

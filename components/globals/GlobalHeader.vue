@@ -13,13 +13,13 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 60px;
     position: relative;
     z-index: 2;
+    padding: 60px 80px 0 80px;
 
     &-logo {
       font-size: 60px;
-      letter-spacing: 5px;
+      letter-spacing: 0px;
     }
 
     &-list {
@@ -28,6 +28,9 @@
 
       li {
         margin-right: 80px;
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
     }
   }

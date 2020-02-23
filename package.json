@@ -16,7 +16,9 @@
     "axios": "^0.19.2",
     "nuxt": "^2.0.0",
     "prismic-dom": "^2.1.0",
-    "prismic-javascript": "^2.1.5"
+    "prismic-javascript": "^2.1.5",
+    "vue-scroll-reveal": "^1.0.11",
+    "vue-scrollmagic": "^1.2.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
