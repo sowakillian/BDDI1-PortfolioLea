@@ -7,7 +7,7 @@
     <div class="home-header-content">
       <div class="home-header-title">
         <h1>/éa Prade/</h1>
-        <span>DIGITAL</span>
+        <span>DIGITAL DESIGNER</span>
       </div>
       <div class="projects-slider">
         <project-slider />
@@ -77,6 +77,35 @@
       justify-content: space-around;
       z-index: 2;
       position: relative;
+    }
+
+    @media all and (max-width: 1600px) {
+      &-title {
+        h1 {
+          font-size: 100px;
+        }
+      }
+    }
+
+    @media all and (max-width: 1280px) {
+      &-title {
+        h1 {
+          font-size: 70px;
+        }
+      }
+    }
+
+    @media all and (max-width: 980px) {
+      &-content {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      &-title {
+        h1 {
+          font-size: 60px;
+        }
+      }
     }
   }
 </style>

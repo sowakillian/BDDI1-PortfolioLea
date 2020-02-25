@@ -1,10 +1,17 @@
 
 <template>
-  <div class="project-slider-item">
-    <nuxt-link to="/projects/blog"><span class="project-slider-item-more"><span class="project-more-symbol">+</span><span class="project-slider-item-more-text">voir le projet</span></span></nuxt-link>
-  </div>
+  <ul>
+    <li v-for="(project, index) in projects" :key="index">
+      <div class="project-slider-item" :style="{ backgroundColor: project.data.color }">
+        <nuxt-link :to="`/projects/${project.uid}`" class="project-phone">
+          <img class="project-slider-item-phone-img" :src="project.data.phonemockup.url" />
+          <span class="project-slider-item-phone-type">{{ Dom.RichText.asText(project.data.name) }} - {{ Dom.RichText.asText(project.data.type) }}</span>
+          <span class="project-slider-item-more"><span class="project-slider-item-more-symbol">+</span><span class="project-slider-item-more-text">voir le projet</span></span>
+        </nuxt-link>
+      </div>
+    </li>
+  </ul>
 </template>
-
 
 <style lang="scss">
  .project-slider-item {

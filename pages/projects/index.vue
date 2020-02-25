@@ -7,6 +7,7 @@
         <div class="project" :style="{ backgroundColor: project.data.color }">
           <nuxt-link :to="`/projects/${project.uid}`" class="project-phone">
             <img class="project-phone-img" :src="project.data.phonemockup.url" />
+            <span class="project-phone-type">{{ Dom.RichText.asText(project.data.name) }} - {{ Dom.RichText.asText(project.data.type) }}</span>
             <span class="project-more"><span class="project-more-symbol">+</span><span class="project-more-text">voir le projet</span></span>
           </nuxt-link>
         </div>
@@ -30,6 +31,7 @@
 
         asyncData(context) {
             if (context.payload) {
+                console.log('payload ouiouioui');
                 return generatePageData('project_page', context.payload)
             } else {
                 return initApi().then(api => {
@@ -41,8 +43,6 @@
                 })
             }
         },
-
-
     }
 </script>
 
@@ -78,6 +78,12 @@
     &-phone {
       display: block;
       width: 100%;
+
+      &-type {
+        position: absolute;
+        right: 0;
+        transform: rotate(68deg) translate(75%, 100px);
+      }
 
       &-img {
         position: absolute;

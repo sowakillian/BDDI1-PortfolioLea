@@ -55,12 +55,12 @@ export default {
       });
 
       // Fetch all the blog posts to generate the Blog page
-      const blogPage = initApi().then(api => {
+      const projectPage = initApi().then(api => {
         return api
-          .query(Prismic.Predicates.at('document.type', 'blog_post'))
+          .query(Prismic.Predicates.at('document.type', 'project'))
           .then(response => {
             return [{
-              route: `/blog`,
+              route: `/projects`,
               payload: response.results
             }]
           })
@@ -69,7 +69,7 @@ export default {
       // Fetch again all the blog posts, but this time generating each post's page
       const projectItems = initApi().then(api => {
         return api
-          .query(Prismic.Predicates.at('document.type', 'projects'))
+          .query(Prismic.Predicates.at('document.type', 'project'))
           .then(response => {
             return response.results.map(payload => {
               return {
@@ -83,7 +83,7 @@ export default {
       // Here I return an array of the results of each promise using the spread operator.
       // It will be passed to each page as the `payload` property of the `context` object,
       // which is used to generate the markup of the page.
-      return Promise.all([homepage, blogPage, projectItems]).then(values => {
+      return Promise.all([homepage, projectPage, projectItems]).then(values => {
         return [...values[0], ...values[1], ...values[2]]
       })
     }

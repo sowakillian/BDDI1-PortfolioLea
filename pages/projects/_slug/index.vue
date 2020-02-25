@@ -26,7 +26,8 @@
 
         asyncData(context) {
             if (context.payload) {
-                return generatePageData('project', context.payload.data)
+                return generatePageData('project', context.payload.data);
+
             } else {
                 return initApi().then(api => {
                     return api

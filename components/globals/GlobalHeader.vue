@@ -33,5 +33,11 @@
         }
       }
     }
+
+    @media all and (max-width: 767px) {
+      &-logo, &-list {
+        display: none;
+      }
+    }
   }
 </style>

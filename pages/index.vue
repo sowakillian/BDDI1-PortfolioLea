@@ -30,6 +30,7 @@ export default {
                 return api
                     .query(Prismic.Predicates.at('document.type', 'homepage'))
                     .then(response => {
+                        console.log(response)
                         return generatePageData('homepage', response.results[0].data)
                     })
             })

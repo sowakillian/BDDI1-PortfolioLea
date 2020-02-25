@@ -12,7 +12,7 @@ export const initApi = req => {
 };
 
 export const linkResolver = doc => {
-  if (doc.type === 'projects') return `/projects/${doc.uid}`
+  if (doc.type === 'projects') return `/projects/${doc.uid}`;
   return `/${doc.uid}`
 };
 
@@ -29,6 +29,7 @@ export const generatePageData = (documentType, data) => {
       return {
         projects: data,
       };
+
     case 'project':
       return {
         title: PrismicDOM.RichText.asText(data.name),
@@ -43,4 +44,4 @@ export const generatePageData = (documentType, data) => {
         deskmockup: data.deskmockup.url,
       }
   }
-}
+};
