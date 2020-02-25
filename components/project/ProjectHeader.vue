@@ -29,6 +29,7 @@
     margin-top: -120px;
     display: flex;
     align-items: center;
+    background-color: slategray;
     background-image: url("../../assets/images/projects/labfive-bg.jpg");
     background-size: cover;
     background-position: center center;

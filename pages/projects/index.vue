@@ -123,4 +123,54 @@
    }
   }
   }
+
+  @media all and (max-width: 1700px) {
+    .project-list {
+      margin: 100px 5%;
+    }
+  }
+
+  @media all and (max-width: 1500px) {
+    .project-list {
+      margin: 100px 2%;
+    }
+  }
+
+  @media all and (max-width: 1280px) {
+    .projectpage-title {
+      font-size: 70px;
+      margin-top: 40px;
+      margin-left: 60px;
+    }
+    .project-list {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+
+      li {
+        width: 100%;
+        margin-top: 300px;
+        &:nth-of-type(odd) {
+          margin-top: 300px;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 600px) {
+    .projectpage-title {
+      font-size: 50px;
+      margin-top: 40px;
+      margin-left: 40px;
+    }
+    .project-list {
+
+      li {
+        margin-top: 200px;
+        &:nth-of-type(odd) {
+          margin-top: 200px;
+        }
+      }
+    }
+  }
 </style>
