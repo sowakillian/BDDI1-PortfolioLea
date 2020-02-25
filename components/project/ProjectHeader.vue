@@ -2,8 +2,8 @@
 <template>
   <div class="project-header" :style="{ backgroundImage: `url('${background}')` }">
     <div class="project-header-content">
-      <span class="project-header-content-title">{{ title }} - <span class="project-header-content-title-type">{{ type }}</span></span>
-      <p>{{ year }}</p>
+      <span class="project-header-content-title"><span class="imcoming">{{ title }} - <span class="project-header-content-title-type">{{ type }}</span></span></span>
+      <span class="project-header-content-year"><span class="project-header-content-year-p">{{ year }}</span></span>
     </div>
   </div>
 </template>
@@ -15,14 +15,47 @@
             'type',
             'year',
             'background',
-        ]
+        ],
+
+        methods: {
+            toggleTitleTransition(typeTransition) {
+                const el = document.querySelector('.imcoming');
+                const year = document.querySelector('.project-header-content-year-p');
+
+                if (typeTransition === 'addClass') {
+                    el.classList.add('imcoming-ok');
+                    year.classList.add('imcoming-ok');
+                } else {
+                    console.warn('otherTransition')
+                    el.classList.remove('imcoming-ok');
+                    year.classList.remove('imcoming-ok');
+                }
+            }
+        },
+
+        mounted() {
+            this.toggleTitleTransition('addClass');
+        },
+
+        destroyed() {
+            console.warn('test');
+            this.toggleTitleTransition('removeClass');
+        }
+
     }
 
 </script>
 
 <style lang="scss">
 
+
+
   .project-header {
+
+    .imcoming-ok {
+      transform: translateY(0px);
+      opacity: 1;
+    }
     height: 100vh;
     width: 100%;
     padding: 0 5% 0 5%;
@@ -36,18 +69,45 @@
 
     &-content {
       color: white;
+      position: relative;
+      width: 100%;
       &-title {
+        width: 100%;
         font-size: 80px;
+        overflow: hidden;
+        display: block;
+        height: 90px;
+        position: relative;
+
+        & > * {
+          position: absolute;
+          transform: translateY(90px);
+          opacity: 0;
+          transition: all 1.5s ease;
+        }
+
+
 
         &-type {
           font-family: GTWalsheim-Regular;
         }
       }
 
-      p {
+      &-year {
+        display: block;
+        overflow: hidden;
         font-size: 40px;
         margin-top: 20px;
         font-family: GTWalsheim-Regular;
+        position: relative;
+        height: 50px;
+
+        &-p {
+          position: absolute;
+          transform: translateY(50px);
+          opacity: 0;
+          transition: all 1.5s ease;
+        }
       }
 
     }
