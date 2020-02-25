@@ -55,5 +55,26 @@ import axios from 'axios'
       padding-left: 5%;
     }
 
+    @media all and (max-width: 1600px) {
+      &-text {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    @media all and (max-width: 767px) {
+      flex-direction: column;
+      padding: 80px 6%;
+
+      &-title {
+        margin-bottom: 20px;
+        font-size: 35px;
+      }
+
+      &-solution {
+        padding-left: 0;
+      }
+    }
+
   }
 </style>

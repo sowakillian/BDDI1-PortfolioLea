@@ -30,6 +30,11 @@ export const generatePageData = (documentType, data) => {
         projects: data,
       };
 
+    case 'project_slider':
+      return {
+        projects: data,
+      };
+
     case 'project':
       return {
         title: PrismicDOM.RichText.asText(data.name),

@@ -1,4 +1,6 @@
 import axios from 'axios'
+import {initApi} from "./prismic.config";
+const Prismic = require('prismic-javascript')
 
 export default {
   mode: 'universal',

@@ -13,6 +13,7 @@
   </ul>
 </template>
 
+
 <style lang="scss">
  .project-slider-item {
    height: 550px;

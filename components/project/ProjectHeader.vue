@@ -50,5 +50,27 @@
       }
 
     }
+
+    @media all and (max-width: 980px) {
+      &-content {
+        &-title {
+          font-size: 60px;
+        }
+      }
+    }
+
+    @media all and (max-width: 600px) {
+      &-content {
+        text-align: center;
+        margin: 0 auto;
+        &-title {
+          font-size: 40px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
   }
 </style>
