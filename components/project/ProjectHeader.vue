@@ -3,7 +3,7 @@
   <div class="project-header" :style="{ backgroundImage: `url('${background}')` }">
     <div class="project-header-content">
       <span class="project-header-content-title"><span class="imcoming">{{ title }} - <span class="project-header-content-title-type">{{ type }}</span></span></span>
-      <span class="project-header-content-year"><span class="project-header-content-year-p">{{ year }}</span></span>
+        <span class="project-header-content-year"><span class="project-header-content-year-p">{{ year }}</span></span>
     </div>
   </div>
 </template>
@@ -23,12 +23,13 @@
                 const year = document.querySelector('.project-header-content-year-p');
 
                 if (typeTransition === 'addClass') {
-                   // el.classList.add('imcoming-ok');
-                    //year.classList.add('imcoming-ok');
+                    console.warn('classAdded');
+                   el.classList.add('imcoming-ok');
+                    year.classList.add('imcoming-ok');
                 } else {
                     console.warn('otherTransition')
-                   // el.classList.remove('imcoming-ok');
-                  //  year.classList.remove('imcoming-ok');
+                       el.classList.remove('imcoming-ok');
+                      year.classList.remove('imcoming-ok');
                 }
             }
         },
@@ -49,13 +50,13 @@
 <style lang="scss">
 
 
-
   .project-header {
 
     .imcoming-ok {
       transform: translateY(0px);
       opacity: 1;
     }
+
     height: 100vh;
     width: 100%;
     padding: 0 5% 0 5%;
@@ -81,8 +82,8 @@
 
         & > * {
           position: absolute;
-          //transform: translateY(90px);
-          //opacity: 0;
+          transform: translateY(90px);
+          opacity: 0;
           transition: all 1.5s ease;
         }
 
@@ -104,8 +105,8 @@
 
         &-p {
           position: absolute;
-          //transform: translateY(50px);
-        //  opacity: 0;
+          transform: translateY(50px);
+          opacity: 0;
           transition: all 1.5s ease;
         }
       }
