@@ -23,6 +23,7 @@
     import { initApi, generatePageData } from '@/prismic.config'
 
     export default {
+
         data() {
             return {
                 Dom: PrismicDOM

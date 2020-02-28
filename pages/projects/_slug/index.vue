@@ -17,6 +17,11 @@
     import axios from 'axios'
 
     export default {
+
+        layout (context) {
+            return 'project'
+        },
+
         components: {
             ProjectHeader,
             ProjectDescription,

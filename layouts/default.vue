@@ -1,6 +1,6 @@
 <template>
   <div>
-    <global-header />
+    <global-header :navColor="navColor"  />
     <nuxt />
     <global-footer />
   </div>
@@ -11,6 +11,12 @@ import GlobalFooter from '~/components/globals/GlobalFooter.vue'
 import GlobalHeader from '~/components/globals/GlobalHeader.vue'
 
 export default {
+
+    data() {
+        return {
+            navColor: "black"
+        }
+    },
 
   components: {
     GlobalHeader,

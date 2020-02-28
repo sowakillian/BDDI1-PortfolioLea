@@ -49,7 +49,6 @@
 
 <style lang="scss">
 
-
   .project-header {
 
     .imcoming-ok {
