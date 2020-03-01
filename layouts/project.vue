@@ -12,6 +12,14 @@
 
     export default {
 
+        layoutTransition: {
+            name: 'layout',
+            mode: 'out-in',
+            afterLeave(el) {
+                console.warn('testOKOKOK');
+            }
+        },
+
         data() {
             return {
                 navColor: "white"

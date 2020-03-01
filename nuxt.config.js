@@ -33,7 +33,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/vue-scroll-reveal', ssr: false }
+    { src: '~/plugins/vue-scroll-reveal', ssr: false },
+    { src: '~/plugins/vue-concise-slider', ssr: false },
   ],
   /*
   ** Nuxt.js dev-modules

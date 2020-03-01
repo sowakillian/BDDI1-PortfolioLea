@@ -77,6 +77,13 @@
       justify-content: space-around;
       z-index: 2;
       position: relative;
+
+      .projects-slider {
+        width: 40%;
+        height: 800px;
+      }
+
+
     }
 
     @media all and (max-width: 1600px) {

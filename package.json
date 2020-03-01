@@ -17,6 +17,7 @@
     "nuxt": "^2.0.0",
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.1.5",
+    "vue-concise-slider": "^3.4.4",
     "vue-scroll-reveal": "^1.0.11",
     "vue-scrollmagic": "^1.2.0"
   },

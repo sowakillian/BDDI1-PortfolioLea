@@ -39,7 +39,6 @@
         },
 
         destroyed() {
-            console.warn('test');
             this.toggleTitleTransition('removeClass');
         }
 

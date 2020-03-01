@@ -18,6 +18,12 @@
 
     export default {
 
+        pageTransition: {
+            afterEnter(el) {
+                console.warn('test');
+            }
+        },
+
         layout (context) {
             return 'project'
         },

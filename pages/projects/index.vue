@@ -6,7 +6,7 @@
       <li v-for="(project, index) in projects" :key="index" v-scroll-reveal>
         <div class="project" :style="{ backgroundColor: project.data.color }">
           <nuxt-link :to="`/projects/${project.uid}`" class="project-phone">
-            <img class="project-phone-img" :src="project.data.phonemockup.url" />
+            <img v-bind:class="{'project-phone-img':true, 'project-phone-img-desk':(project.data.phonemockupisdesk === true)}" :src="project.data.phonemockup.url" />
             <span class="project-phone-type">{{ Dom.RichText.asText(project.data.name) }} - {{ Dom.RichText.asText(project.data.type) }}</span>
             <span class="project-more"><span class="project-more-symbol">+</span><span class="project-more-text">voir le projet</span></span>
           </nuxt-link>
@@ -27,8 +27,11 @@
         data() {
             return {
                 Dom: PrismicDOM
+
             }
         },
+
+
 
         asyncData(context) {
             if (context.payload) {
@@ -36,12 +39,16 @@
                 return generatePageData('project_page', context.payload)
             } else {
                 return initApi().then(api => {
+
                     return api
                         .query(Prismic.Predicates.at('document.type', 'project'))
                         .then(response => {
-                            return generatePageData('project_page', response.results)
+                            console.warn(response.results);
+                            return generatePageData('project_page', response.results);
+
                         })
-                })
+                });
+
             }
         },
     }
@@ -83,7 +90,8 @@
       &-type {
         position: absolute;
         right: 0;
-        transform: rotate(68deg) translate(75%, 100px);
+        transform: rotate(68deg) translate(75%, 80px);
+        font-size: 20px;
       }
 
       &-img {
@@ -92,6 +100,10 @@
         top: 30%;
         transform: translate(-50%, -50%) rotate(-23deg);
         max-width: 640px;
+
+        &-desk {
+          transform: translate(-50%, -20%) rotate(-23deg);
+        }
       }
     }
 
