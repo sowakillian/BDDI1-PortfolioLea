@@ -1,6 +1,6 @@
 
 <template>
-  <div v-scroll-reveal class="home-contact" id="contact">
+  <div class="home-contact" id="contact">
     <h2>contact</h2>
     <div class="home-contact-content">
       <div v-html="coordonnees" class="home-contact-infos">

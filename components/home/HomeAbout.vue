@@ -1,6 +1,9 @@
 
 <template>
-  <div v-scroll-reveal class="home-about" id="lea">
+  <div class="home-about" id="lea">
+    <span class="home-about-marquee">
+      LET'S CREATE
+    </span>
     <h2>/éa</h2>
     <div class="home-about-content">
       <div v-html="description" class="home-about-presentation">
@@ -27,7 +30,21 @@
   .home-about {
     padding: 0 10%;
     width: 100%;
-    margin: 165px 0 290px 0;
+    margin: 165px 0 480px 0;
+    position: relative;
+
+    &-marquee {
+      font-size: 600px;
+      display: inline-block;
+      white-space: nowrap;
+      animation: defilement-rtl 70s infinite linear;
+      color: white;
+      position: absolute;
+      padding-right: 2em;                   /* un peu d'espace pour la transition */
+      left: 0;
+      bottom: -500px;
+      z-index: -1;
+    }
 
     &-content {
       display: flex;

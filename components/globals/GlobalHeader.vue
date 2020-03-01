@@ -1,5 +1,6 @@
 <template>
   <div class="nav">
+    <div class="nav-mail"><span><img src="~/assets/images/icon-email.png"></span></div>
     <div class="nav-logo" :style="{ color: navColor }"><nuxt-link to="/">//</nuxt-link></div>
     <ul class="nav-list" :style="{ color: navColor }">
       <li><nuxt-link to="/projects">projets</nuxt-link></li>
@@ -43,6 +44,24 @@
     position: relative;
     z-index: 2;
     padding: 60px 80px 0 80px;
+
+    &-mail {
+      background-color: black;
+      color: white;
+      width: 70px;
+      height: 290px;
+      transform: rotate(23deg);
+      position: fixed;
+      bottom: 0;
+      left: -35px;
+
+      span {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        transform: rotate(-23deg);
+      }
+    }
 
     &-logo {
       font-size: 60px;
