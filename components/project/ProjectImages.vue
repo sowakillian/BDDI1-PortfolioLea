@@ -2,13 +2,13 @@
   <div class="project-images" :style="{ backgroundColor: color }">
     <div class="project-images-phonemockup">
       <span class="project-images-phonemockup-img">
-        <img :src="phonemockup" v-scroll-reveal/>
+        <img :src="phonemockup"/>
         <span class="project-images-phonemockup-img-skills">
           {{ skills }}
         </span>
       </span>
     </div>
-    <div class="project-images-deskmockup" v-scroll-reveal>
+    <div class="project-images-deskmockup">
       <img :src="deskmockup" />
     </div>
   </div>

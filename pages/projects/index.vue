@@ -1,9 +1,13 @@
 <template>
   <div class="container">
-    <h1 class="projectpage-title">projets</h1>
+    <h1 class="projectpage-title" v-rellax="{
+      // Rellax Options
+      // See: https://github.com/dixonandmoe/rellax#features
+      speed: -3,
+    }">projets</h1>
 
     <ul class="project-list">
-      <li v-for="(project, index) in projects" :key="index">
+      <li v-for="(project, index) in projects" :key="index" >
         <div class="project" :style="{ backgroundColor: project.data.color }">
           <nuxt-link :to="`/projects/${project.uid}`" class="project-phone">
             <img v-bind:class="{'project-phone-img':true, 'project-phone-img-desk':(project.data.phonemockupisdesk === true)}" :src="project.data.phonemockup.url" />

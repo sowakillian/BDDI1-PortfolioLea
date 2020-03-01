@@ -5,7 +5,11 @@
       Web/Graphic design
     </span>
     <div class="home-header-content">
-      <div class="home-header-title">
+      <div class="home-header-title" v-rellax="{
+      // Rellax Options
+      // See: https://github.com/dixonandmoe/rellax#features
+      speed: -3,
+    }">
         <h1>/éa Prade/</h1>
         <span>DIGITAL DESIGNER</span>
       </div>

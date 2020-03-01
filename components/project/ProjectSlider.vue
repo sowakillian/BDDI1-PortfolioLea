@@ -39,7 +39,9 @@
           return {
               options: {
                   effect: 'fade',
-                  loop: true
+                  loop: true,
+                  autoplay:5000,
+                  speed: 1500
               }
           }
       }
@@ -65,6 +67,7 @@
        right: 0;
        transform: rotate(68deg) translate(75%, 80px);
        font-size: 20px;
+       color: black;
      }
 
      &-img {

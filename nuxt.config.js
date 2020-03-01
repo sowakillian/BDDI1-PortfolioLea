@@ -35,6 +35,8 @@ export default {
   plugins: [
     { src: '~/plugins/vue-scroll-reveal', ssr: false },
     { src: '~/plugins/vue-concise-slider', ssr: false },
+    { src: '~/plugins/vue-concise-slider', ssr: false },
+    { src: '~/plugins/vue-rellax', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

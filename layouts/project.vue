@@ -12,13 +12,13 @@
 
     export default {
 
-        layoutTransition: {
-            name: 'layout',
-            mode: 'out-in',
-            afterLeave(el) {
-                console.warn('testOKOKOK');
-            }
-        },
+        //layoutTransition: {
+            //name: 'layout',
+          //  mode: 'out-in',
+           // afterLeave(el) {
+         //       console.warn('testOKOKOK');
+          //  }
+       // },
 
         data() {
             return {

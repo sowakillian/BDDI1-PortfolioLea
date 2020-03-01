@@ -8,9 +8,9 @@
     <div class="home-about-content">
       <div v-html="description" class="home-about-presentation">
       </div>
-      <div class="home-about-photo">
-        <div class="home-about-photo-img">
-          <img src="~/assets/images/photo-lea.png">
+      <div class="home-about-photo" >
+        <div class="home-about-photo-img" >
+          <img src="~/assets/images/photo-lea.png" >
           <span class="home-about-photo-img-cv"><img src="~/assets/images/icon-pdf.png"><span>Voir mon CV</span></span>
         </div>
       </div>

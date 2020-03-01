@@ -1,7 +1,11 @@
 
 <template>
   <div class="project-header" :style="{ backgroundImage: `url('${background}')` }">
-    <div class="project-header-content">
+    <div class="project-header-content" v-rellax="{
+      // Rellax Options
+      // See: https://github.com/dixonandmoe/rellax#features
+      speed: -3,
+    }">
       <span class="project-header-content-title"><span class="imcoming">{{ title }} - <span class="project-header-content-title-type">{{ type }}</span></span></span>
         <span class="project-header-content-year"><span class="project-header-content-year-p">{{ year }}</span></span>
     </div>
@@ -65,6 +69,7 @@
     background-image: url("../../assets/images/projects/labfive-bg.jpg");
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
 
     &-content {
       color: white;
