@@ -3,7 +3,7 @@
     <h1 class="projectpage-title" v-rellax="{
       // Rellax Options
       // See: https://github.com/dixonandmoe/rellax#features
-      speed: -3,
+      speed: -2,
     }">projets</h1>
 
     <ul class="project-list">
