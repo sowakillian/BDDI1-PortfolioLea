@@ -86,6 +86,15 @@
     background-color: #4BD079;
     transform: rotate(23deg);
     position: relative;
+    transition: all .6s ease;
+
+    &:hover {
+      transform: scale(1.075) rotate(22deg);
+
+      .project-more-symbol {
+        transform: translate(-45%, -35%) rotate(-203deg);
+      }
+    }
 
     &-phone {
       display: block;
@@ -127,6 +136,7 @@
       left: 45%;
       top: 40%;
       transform: translate(-50%, -50%) rotate(-23deg);
+      transition: all .6s ease;
     }
 
   &-text {
