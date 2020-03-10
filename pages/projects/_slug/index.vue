@@ -25,7 +25,7 @@
         },
 
         layout (context) {
-            return 'project'
+           // return 'project'
         },
 
         components: {

@@ -36,6 +36,23 @@ strong {
   font-family: GTWalsheim-Bold;
 }
 
+.page-enter-active, .page-leave-active {
+  transition: all 0.7s ease-in-out;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+  transform: translateY(-2%);
+  transform-origin: 50% 50%;
+}
+
+.layout-enter-active, .layout-leave-active {
+  transition: all 1s ease-in-out;
+}
+.layout-enter, .layout-leave-active {
+  opacity: 0;
+  transform: translateY(-2%);
+  transform-origin: 50% 50%;
+}
 
 
 

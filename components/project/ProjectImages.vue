@@ -61,6 +61,7 @@
       img {
         max-width: 100%;
         display: block;
+        margin-left: auto;
       }
     }
 
