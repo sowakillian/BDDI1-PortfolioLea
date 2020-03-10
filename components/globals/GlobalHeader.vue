@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <div class="nav-mail"><span><img src="~/assets/images/icon-email.png"></span></div>
+    <div class="nav-mail"><a :href="`mailto:lea.pradel@gmail.com`"><img src="~/assets/images/icon-email.svg"></a></div>
     <div class="nav-logo" :style="{ color: navColor }"><nuxt-link to="/">//</nuxt-link></div>
     <ul class="nav-list" :style="{ color: navColor }">
       <li><nuxt-link to="/projects">projets</nuxt-link></li>
@@ -41,7 +41,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
     z-index: 2;
     padding: 60px 80px 0 80px;
 
@@ -55,7 +55,7 @@
       bottom: 0;
       left: -35px;
 
-      span {
+      a {
         position: absolute;
         right: 20px;
         top: 20px;

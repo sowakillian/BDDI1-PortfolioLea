@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <project-header :title="title" :type="type" :year="year" :background="background"/>
+    <project-header :color="color" :title="title" :type="type" :year="year" :background="background"/>
     <project-description :pitch="pitch" :solution="solution" :color="color"/>
     <project-images :color="color" :skills="skills" :phonemockup="phonemockup" :deskmockup="deskmockup"/>
     <project-back />

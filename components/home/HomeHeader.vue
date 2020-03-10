@@ -71,6 +71,10 @@
         font-size: 30px;
         color: #FF4E50;
         font-family: 'GTWalsheim-Regular';
+        width: 100%;
+        text-align: right;
+        padding-right: 70px;
+        display: block;
       }
     }
 
@@ -84,7 +88,7 @@
 
       .projects-slider {
         width: 40%;
-        height: 800px;
+        height: 900px;
       }
 
 

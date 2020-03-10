@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="page-overlay"></div>
     <global-header :navColor="navColor" />
     <nuxt />
     <global-footer />
@@ -11,14 +12,6 @@
     import GlobalHeader from '~/components/globals/GlobalHeader.vue'
 
     export default {
-
-        //layoutTransition: {
-            //name: 'layout',
-          //  mode: 'out-in',
-           // afterLeave(el) {
-         //       console.warn('testOKOKOK');
-          //  }
-       // },
 
         data() {
             return {
@@ -33,7 +26,7 @@
     }
 </script>
 
-<style>
+<style lang="scss">
   html {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -51,6 +44,21 @@
   *:after {
     box-sizing: border-box;
     margin: 0;
+  }
+
+  .page-overlay {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 200vh;
+    z-index: 3;
+
+    &-ciao {
+        transform: translateX(100%);
+      transition: all 2s ease;
+     }
   }
 
 </style>

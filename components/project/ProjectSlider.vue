@@ -101,7 +101,8 @@
        color: #FF4E50;
        position: absolute;
        transform: rotate(-23deg);
-       bottom: -30px;
+       bottom: -40px;
+       left: 0px;
        font-size: 18px;
        display: inline-block;
        white-space: nowrap;

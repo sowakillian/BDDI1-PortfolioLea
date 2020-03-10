@@ -14,6 +14,7 @@
 
 <script>
     export default {
+
         props: [
             'title',
             'type',
@@ -21,26 +22,43 @@
             'background',
         ],
 
+        data () {
+           return {
+              bgSize: 100
+           }
+        },
+
         methods: {
             toggleTitleTransition(typeTransition) {
                 const el = document.querySelector('.imcoming');
+                const pageOverlay = document.querySelector('.page-overlay');
                 const year = document.querySelector('.project-header-content-year-p');
 
                 if (typeTransition === 'addClass') {
                     console.warn('classAdded');
                    el.classList.add('imcoming-ok');
                     year.classList.add('imcoming-ok');
+                    //pageOverlay.classList.add('page-overlay-ciao');
                 } else {
                     console.warn('otherTransition')
                        el.classList.remove('imcoming-ok');
                       year.classList.remove('imcoming-ok');
                 }
+            },
+            increaseBackgroundSize() {
+                window.addEventListener('scroll', function(e) {
+                    console.warn('bgSize', this.bgSize);
+                    this.bgSize++;
+                });
             }
         },
 
         mounted() {
             this.toggleTitleTransition('addClass');
+            //this.increaseBackgroundSize();
+
         },
+
 
         destroyed() {
             this.toggleTitleTransition('removeClass');
@@ -88,6 +106,7 @@
           transform: translateY(90px);
           opacity: 0;
           transition: all 1.5s ease;
+          left: 0;
         }
 
 
@@ -111,6 +130,8 @@
           transform: translateY(50px);
           opacity: 0;
           transition: all 1.5s ease;
+          left: 0;
+          width: 100%;
         }
       }
 
