@@ -36,13 +36,13 @@
 
                 if (typeTransition === 'addClass') {
                     console.warn('classAdded');
-                   el.classList.add('imcoming-ok');
-                    year.classList.add('imcoming-ok');
+                   //el.classList.add('imcoming-ok');
+                   // year.classList.add('imcoming-ok');
                     //pageOverlay.classList.add('page-overlay-ciao');
                 } else {
                     console.warn('otherTransition')
-                       el.classList.remove('imcoming-ok');
-                      year.classList.remove('imcoming-ok');
+                      // el.classList.remove('imcoming-ok');
+                      //year.classList.remove('imcoming-ok');
                 }
             },
             increaseBackgroundSize() {
@@ -103,10 +103,12 @@
 
         & > * {
           position: absolute;
-          transform: translateY(90px);
-          opacity: 0;
+          //transform: translateY(90px);
+          transform: translateY(0px);
+          opacity: 1;
           transition: all 1.5s ease;
           left: 0;
+          width: 100%;
         }
 
 
@@ -127,8 +129,9 @@
 
         &-p {
           position: absolute;
-          transform: translateY(50px);
-          opacity: 0;
+          //transform: translateY(50px);
+          transform: translateY(0);
+          opacity: 1;
           transition: all 1.5s ease;
           left: 0;
           width: 100%;
@@ -141,6 +144,7 @@
       &-content {
         &-title {
           font-size: 60px;
+          height: 80px;
         }
       }
     }
@@ -150,7 +154,13 @@
         text-align: center;
         margin: 0 auto;
         &-title {
+          overflow: visible;
           font-size: 40px;
+          height: auto;
+          
+          & > * {
+            position: relative;
+          }
         }
 
         p {

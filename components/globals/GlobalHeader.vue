@@ -190,6 +190,12 @@
       }
     }
 
+    @media all and (max-width: 1280px) {
+      &-mail {
+        display: none;
+      }
+    }
+
     @media all and (max-width: 767px) {
       &-list {
         display: none;

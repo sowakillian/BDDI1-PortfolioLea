@@ -20,5 +20,19 @@
     &-arrow {
       margin-right: 26px;
     }
+
+    @media all and (max-width: 480px) {
+      justify-content: center;
+      &-text {
+        font-size: 16px;
+      }
+
+      &-arrow {
+        width: 30px;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
   }
 </style>

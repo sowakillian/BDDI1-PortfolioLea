@@ -86,10 +86,12 @@
     background-color: #4BD079;
     transform: rotate(23deg);
     position: relative;
-    transition: all .6s ease;
+    transition: all .8s ease;
 
     &:hover {
-      transform: scale(1.075) rotate(22deg);
+      //transform: scale(1.075) rotate(22deg);
+      height: 580px;
+      width: 400px;
 
       .project-more-symbol {
         transform: translate(-45%, -35%) rotate(-203deg);
