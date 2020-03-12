@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <div class="nav-mail"><a :href="`mailto:lea.pradel@gmail.com`"><img src="~/assets/images/icon-email.svg"></a></div>
+    <a :href="`mailto:lea.pradel@gmail.com`" class="nav-mail"><img src="~/assets/images/icon-email.svg"></a>
     <div class="nav-logo" :style="{ color: navColor }"><nuxt-link to="/">//</nuxt-link></div>
     <ul class="nav-list" :style="{ color: navColor }">
       <li><nuxt-link to="/projects">projets</nuxt-link></li>
@@ -55,7 +55,7 @@
       bottom: 0;
       left: -35px;
 
-      a {
+      img {
         position: absolute;
         right: 20px;
         top: 20px;
