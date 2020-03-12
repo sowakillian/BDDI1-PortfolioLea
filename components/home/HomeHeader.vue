@@ -10,7 +10,7 @@
       // See: https://github.com/dixonandmoe/rellax#features
       speed: -3,
     }">
-        <h1>/éa Prade/</h1>
+        <div class="home-header-title-h1">/éa Prade/</div>
         <span>DIGITAL DESIGNER</span>
       </div>
       <div class="projects-slider">
@@ -41,6 +41,16 @@
     position: relative;
     margin-top: -120px;
 
+    &-overlay {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      background-image: url("../../assets/background-header.jpg");
+      left: 0;
+      top: 0;
+      z-index: 4;
+    }
+
     &-marquee {
       font-size: 600px;
       display: inline-block;
@@ -63,7 +73,7 @@
     }
 
     &-title {
-      h1 {
+      &-h1 {
         font-size: 150px;
       }
 

@@ -40,7 +40,7 @@ export const generatePageData = (documentType, data) => {
         title: PrismicDOM.RichText.asText(data.name),
         type: PrismicDOM.RichText.asText(data.type),
         pitch: PrismicDOM.RichText.asText(data.pitch),
-        solution: PrismicDOM.RichText.asText(data.pitch),
+        solution: PrismicDOM.RichText.asText(data.solution),
         year: PrismicDOM.RichText.asText(data.year),
         skills: PrismicDOM.RichText.asText(data.skills),
         background: data.background.url,
