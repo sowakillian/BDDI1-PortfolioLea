@@ -93,7 +93,6 @@
       align-items: center;
       height: 100%;
       justify-content: space-around;
-      z-index: 2;
       position: relative;
 
       .projects-slider {
