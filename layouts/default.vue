@@ -3,7 +3,7 @@
     <global-header :navColor="navColor"  />
     <nuxt />
 
-    <global-footer :footerDatas="layout" />
+    <global-footer :footerDatas="footer" />
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
         }
     },
 
-    computed: mapState(['layout']),
+    computed: mapState(['footer']),
 
   components: {
     GlobalHeader,

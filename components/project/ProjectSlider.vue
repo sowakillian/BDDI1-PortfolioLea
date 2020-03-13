@@ -1,31 +1,11 @@
 
 <template>
   <slider ref="slider" :options="options">
-    <slider-item>
-      <div class="project-slider-item" style="background-color: #4BD079;">
-        <nuxt-link :to="`/projects/labfive`" class="project-slider-item-phone">
-          <img class="project-slider-item-phone-img" src="~/assets/images/projects/labfive-phonemockup.png" />
-          <span class="project-slider-item-phone-type">LabFive - UI Design</span>
-          <span class="project-slider-item-more"><span class="project-slider-item-more-symbol">+</span><span class="project-slider-item-more-text">voir le projet</span></span>
-        </nuxt-link>
-      </div>
-    </slider-item>
-
-    <slider-item>
-      <div class="project-slider-item" style="background-color: #B4B2FA;">
-        <nuxt-link :to="`/projects/lecerf`" class="project-slider-item-phone">
-          <img class="project-slider-item-phone-img" src="~/assets/images/projects/lecerf-phonemockup.png" />
-          <span class="project-slider-item-phone-type">LabFive - UI Design</span>
-          <span class="project-slider-item-more"><span class="project-slider-item-more-symbol">+</span><span class="project-slider-item-more-text">voir le projet</span></span>
-        </nuxt-link>
-      </div>
-    </slider-item>
-
-    <slider-item>
-      <div class="project-slider-item" style="background-color: #FF5A5A;">
-        <nuxt-link :to="`/projects/labfive`" class="project-slider-item-phone">
-          <img class="project-slider-item-phone-img" src="~/assets/images/projects/labfive-phonemockup.png" />
-          <span class="project-slider-item-phone-type">LabFive - UI Design</span>
+    <slider-item v-for="(project, index) in projects">
+      <div class="project-slider-item" :style="{ backgroundColor: project.data.color }">
+        <nuxt-link :to="`/projects/${project.uid}`" class="project-slider-item-phone">
+          <img v-bind:class="{'project-phone-img':true, 'project-phone-img-desk':(project.data.phonemockupisdesk === true)}" :src="project.data.phonemockup.url" />
+          <span class="project-slider-item-phone-type">{{ project.data.name[0].text }} - {{ project.data.type[0].text }}</span>
           <span class="project-slider-item-more"><span class="project-slider-item-more-symbol">+</span><span class="project-slider-item-more-text">voir le projet</span></span>
         </nuxt-link>
       </div>
@@ -34,6 +14,7 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex';
   export default {
       data () {
           return {
@@ -44,7 +25,9 @@
                   speed: 1500
               }
           }
-      }
+      },
+
+      computed: mapState(['projects']),
 
   }
 </script>
