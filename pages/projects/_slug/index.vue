@@ -28,6 +28,24 @@
            // return 'project'
         },
 
+        methods: {
+            changeNavColor (type) {
+                if (type === 'created') {
+                    this.$store.commit('CHANGE_NAV_COLOR', "white");
+                } else {
+                    this.$store.commit('CHANGE_NAV_COLOR', "black");
+                }
+            },
+        },
+
+        created() {
+            this.changeNavColor('created');
+        },
+
+        destroyed() {
+            this.changeNavColor('destroyed');
+        },
+
         components: {
             ProjectHeader,
             ProjectDescription,

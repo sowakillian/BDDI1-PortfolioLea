@@ -5,7 +5,7 @@
       <div class="project-slider-item" :style="{ backgroundColor: project.data.color }">
         <nuxt-link :to="`/projects/${project.uid}`" class="project-slider-item-phone">
           <img v-bind:class="{'project-slider-item-phone-img':true, 'project-slider-item-phone-img-desk':(project.data.phonemockupisdesk === true)}" :src="project.data.phonemockup.url" />
-          <span class="project-slider-item-phone-type">{{ project.data.name[0].text }} - {{ project.data.type[0].text }}</span>
+          <span class="project-slider-item-phone-type">{{ $prismic.asText(project.data.name) }} - {{ $prismic.asText(project.data.type) }}</span>
           <span class="project-slider-item-more"><span class="project-slider-item-more-symbol">+</span><span class="project-slider-item-more-text">voir le projet</span></span>
         </nuxt-link>
       </div>
@@ -16,9 +16,7 @@
 <script>
   import { mapState } from 'vuex';
   export default {
-
       computed: mapState(['projects']),
-
   }
 </script>
 

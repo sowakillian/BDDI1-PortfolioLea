@@ -2,7 +2,8 @@ import Prismic from 'prismic-javascript'
 
 export const state = () => ({
   footer: {},
-  projects: {}
+  projects: {},
+  navColor: "black"
 });
 
 export const mutations = {
@@ -11,7 +12,10 @@ export const mutations = {
   },
   SET_PROJECTS_DATA (state, data) {
     state.projects = data;
-  }
+  },
+  CHANGE_NAV_COLOR (state, data) {
+    state.navColor = data;
+  },
 };
 
 export const actions = {

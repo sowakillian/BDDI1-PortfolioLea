@@ -1,6 +1,6 @@
 <template>
   <div>
-    <global-header :navColor="navColor"  />
+    <global-header  />
     <nuxt />
 
     <global-footer :footerDatas="footer" />
@@ -13,12 +13,6 @@ import GlobalHeader from '~/components/globals/GlobalHeader.vue';
 import { mapState } from 'vuex';
 
 export default {
-
-    data() {
-        return {
-            navColor: "black"
-        }
-    },
 
     computed: mapState(['footer']),
 

@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <a :href="`mailto:lea.pradel@gmail.com`" class="nav-mail"><img src="~/assets/images/icon-email.svg"></a>
-    <div class="nav-logo" :style="{ color: navColor }"><nuxt-link to="/">//</nuxt-link></div>
+    <div class="nav-logo" :style="{ color: navColor}"><nuxt-link to="/">//</nuxt-link></div>
     <ul class="nav-list" :style="{ color: navColor }">
       <li><nuxt-link to="/projects">projets</nuxt-link></li>
       <li><nuxt-link :to="{ path: '/',hash:'#lea'}">/éa</nuxt-link></li>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex';
   export default {
       methods: {
           toggleMenu()  {
@@ -31,9 +32,8 @@
           }
       },
 
-      props: [
-        'navColor'
-      ]
+      computed: mapState(['navColor']),
+
   }
 </script>
 <style lang="scss">
