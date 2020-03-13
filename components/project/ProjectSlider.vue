@@ -1,7 +1,7 @@
 
 <template>
-  <ul>
-    <li v-for="(project, index) in projects">
+  <slider ref="slider" :options="options">
+    <slider-item v-for="(project, index) in projects">
       <div class="project-slider-item" :style="{ backgroundColor: project.data.color }">
         <nuxt-link :to="`/projects/${project.uid}`" class="project-slider-item-phone">
           <img v-bind:class="{'project-slider-item-phone-img':true, 'project-slider-item-phone-img-desk':(project.data.phonemockupisdesk === true)}" :src="project.data.phonemockup.url" />
@@ -9,14 +9,24 @@
           <span class="project-slider-item-more"><span class="project-slider-item-more-symbol">+</span><span class="project-slider-item-more-text">voir le projet</span></span>
         </nuxt-link>
       </div>
-    </li>
-  </ul>
+    </slider-item>
+  </slider>
 </template>
 
 <script>
   import { mapState } from 'vuex';
   export default {
       computed: mapState(['projects']),
+
+      data () {
+          return {
+              options: {
+                  effect: 'fade',
+                  loop: true,
+                  speed: 1500
+              }
+          }
+      },
   }
 </script>
 

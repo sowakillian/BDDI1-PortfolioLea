@@ -87,11 +87,11 @@
 
     &:hover {
       //transform: scale(1.075) rotate(22deg);
-      height: 580px;
-      width: 400px;
+      //height: 580px;
+      //width: 400px;
 
       .project-more-symbol {
-        transform: translate(-45%, -35%) rotate(-203deg);
+        //transform: translate(-45%, -35%) rotate(-203deg);
       }
     }
 
