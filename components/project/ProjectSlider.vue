@@ -1,31 +1,21 @@
 
 <template>
-  <slider ref="slider" :options="options">
-    <slider-item v-for="(project, index) in projects">
+  <ul>
+    <li v-for="(project, index) in projects">
       <div class="project-slider-item" :style="{ backgroundColor: project.data.color }">
         <nuxt-link :to="`/projects/${project.uid}`" class="project-slider-item-phone">
-          <img v-bind:class="{'project-phone-img':true, 'project-phone-img-desk':(project.data.phonemockupisdesk === true)}" :src="project.data.phonemockup.url" />
+          <img v-bind:class="{'project-slider-item-phone-img':true, 'project-slider-item-phone-img-desk':(project.data.phonemockupisdesk === true)}" :src="project.data.phonemockup.url" />
           <span class="project-slider-item-phone-type">{{ project.data.name[0].text }} - {{ project.data.type[0].text }}</span>
           <span class="project-slider-item-more"><span class="project-slider-item-more-symbol">+</span><span class="project-slider-item-more-text">voir le projet</span></span>
         </nuxt-link>
       </div>
-    </slider-item>
-  </slider>
+    </li>
+  </ul>
 </template>
 
 <script>
   import { mapState } from 'vuex';
   export default {
-      data () {
-          return {
-              options: {
-                  effect: 'fade',
-                  loop: true,
-                  autoplay:5000,
-                  speed: 1500
-              }
-          }
-      },
 
       computed: mapState(['projects']),
 
@@ -59,6 +49,10 @@
        top: 30%;
        transform: translate(-50%, -50%) rotate(-23deg);
        max-width: 640px;
+
+       &-desk {
+         transform: translate(-50%, -20%) rotate(-23deg);
+       }
      }
    }
 
