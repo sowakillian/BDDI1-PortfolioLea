@@ -1,16 +1,17 @@
 <template>
   <div>
-    <CursorFx class="cursor" color="#FF4E50" color-hover="#f1c40f" hide-outside inside-size="20px"/>
     <global-header :navColor="navColor"  />
     <nuxt />
 
-    <global-footer />
+    <global-footer :footerDatas="layout" />
+    fff
   </div>
 </template>
 
 <script>
 import GlobalFooter from '~/components/globals/GlobalFooter.vue';
 import GlobalHeader from '~/components/globals/GlobalHeader.vue';
+import { mapState } from 'vuex';
 
 export default {
 
@@ -20,10 +21,13 @@ export default {
         }
     },
 
+    computed: mapState(['layout']),
+
   components: {
     GlobalHeader,
     GlobalFooter,
-  }
+  },
+
 }
 </script>
 

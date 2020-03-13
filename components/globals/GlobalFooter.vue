@@ -1,10 +1,21 @@
 
 <template>
   <div class="global-footer">
-    /éa prade/ - 2020
+    {{ footerDatas }}
   </div>
 </template>
 
+<script>
+    import {generatePageData, initApi} from "../../prismic.config";
+    import Prismic from 'prismic-javascript'
+    import PrismicDOM from 'prismic-dom'
+
+    export default {
+        props: [
+            'footerDatas',
+        ]
+    }
+</script>
 
 <style lang="scss">
   .global-footer {

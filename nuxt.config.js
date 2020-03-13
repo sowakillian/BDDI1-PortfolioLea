@@ -42,7 +42,13 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '~/modules/crawler',
+    '~/modules/static',
   ],
+  prismic: {
+    endpoint: 'https://leapradel-portfolio.cdn.prismic.io/api/v2',
+  },
+
   generate: {
     routes: function() {
       // Fetch content for the homepage and generate it
@@ -93,10 +99,14 @@ export default {
       })
     }
   },
+  modules: [
+    '@nuxtjs/prismic',
+  ],
   /*
   ** Nuxt.js modules
   */
   /*
+
   ** Build configuration
   */
   build: {

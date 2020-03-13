@@ -30,10 +30,17 @@ export const generatePageData = (documentType, data) => {
         projects: data,
       };
 
+    case 'footer':
+      return {
+        footer: data,
+      };
+
     case 'project_slider':
       return {
         projects: data,
       };
+
+
 
     case 'project':
       return {

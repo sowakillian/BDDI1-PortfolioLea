@@ -35,8 +35,6 @@
             }
         },
 
-
-
         asyncData(context) {
             if (context.payload) {
                 console.log('payload ouiouioui');
@@ -47,7 +45,6 @@
                     return api
                         .query(Prismic.Predicates.at('document.type', 'project'))
                         .then(response => {
-                            console.warn(response.results);
                             return generatePageData('project_page', response.results);
 
                         })
