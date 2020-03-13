@@ -4,7 +4,6 @@
     <nuxt />
 
     <global-footer :footerDatas="layout" />
-    fff
   </div>
 </template>
 
