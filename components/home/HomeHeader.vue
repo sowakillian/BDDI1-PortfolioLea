@@ -59,6 +59,7 @@
       left: 0;
       top: 0;
       z-index: 400;
+      display: none;
 
 
       &-title {
@@ -166,6 +167,20 @@
         margin-top: 200px;
         &-h1 {
           font-size: 60px;
+        }
+      }
+    }
+
+    @media all and (max-width: 420px) {
+      padding: 0;
+
+      &-title {
+        &-h1 {
+          font-size: 40px;
+        }
+
+        span {
+          font-size: 20px;
         }
       }
     }

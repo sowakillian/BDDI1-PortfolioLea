@@ -7,16 +7,16 @@
       <li><nuxt-link :to="{ path: '/',hash:'#lea'}">/éa</nuxt-link></li>
       <li><nuxt-link :to="{ path: '/',hash:'#contact'}">contact</nuxt-link></li>
     </ul>
-    <div class="mobile-nav"  id="menuToggle" @click="toggleMenu">
+    <div class="mobile-nav"  id="menuToggle" @click="isMobileMenuActive = !isMobileMenuActive">
       <input type="checkbox" />
       <span :style="{ backgroundColor: navColor }"></span>
       <span :style="{ backgroundColor: navColor }"></span>
       <span :style="{ backgroundColor: navColor }"></span>
     </div>
-    <ul class="mobile-nav-list">
-      <li><nuxt-link to="/projects">projets</nuxt-link></li>
-      <li><nuxt-link to="{ path: '/', hash:'#lea'}">/éa</nuxt-link></li>
-      <li><nuxt-link to="{ path: '/', hash:'#contact'}">contact</nuxt-link></li>
+    <ul class="mobile-nav-list" v-bind:class="{ 'mobile-nav-list-active': isMobileMenuActive }">
+      <li @click="isMobileMenuActive = !isMobileMenuActive"><nuxt-link to="/projects">projets</nuxt-link></li>
+      <li @click="isMobileMenuActive = !isMobileMenuActive"><nuxt-link :to="{ path: '/',hash:'#lea'}">/éa</nuxt-link></li>
+      <li @click="isMobileMenuActive = !isMobileMenuActive"><nuxt-link :to="{ path: '/',hash:'#contact'}">contact</nuxt-link></li>
     </ul>
   </div>
 </template>
@@ -24,15 +24,14 @@
 <script>
     import { mapState } from 'vuex';
   export default {
-      methods: {
-          toggleMenu()  {
-              const el = document.querySelector('.mobile-nav-list');
-              el.classList.toggle('mobile-nav-list-active');
-              console.warn('toggleMenu');
-          }
-      },
 
       computed: mapState(['navColor']),
+
+      data (){
+          return {
+              isMobileMenuActive: false,
+        }
+      }
 
   }
 </script>
