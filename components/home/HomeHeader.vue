@@ -165,6 +165,7 @@
 
       &-title {
         margin-top: 200px;
+        transform: translate3d(0px, 0px, 0px) !important;
         &-h1 {
           font-size: 60px;
         }
