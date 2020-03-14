@@ -11,7 +11,7 @@
         <div class="project" :style="{ backgroundColor: project.data.color }">
           <nuxt-link :to="`/projects/${project.uid}`" class="project-phone">
             <img v-bind:class="{'project-phone-img':true, 'project-phone-img-desk':(project.data.phonemockupisdesk === true)}" :src="project.data.phonemockup.url" />
-            <span class="project-phone-type">{{ Dom.RichText.asText(project.data.name) }} - {{ Dom.RichText.asText(project.data.type) }}</span>
+            <span class="project-phone-type" v-bind:class="{'project-phone-type-desk':(project.data.phonemockupisdesk === true)}">{{ Dom.RichText.asText(project.data.name) }} - {{ Dom.RichText.asText(project.data.type) }}</span>
             <span class="project-more"><span class="project-more-symbol">+</span><span class="project-more-text">voir le projet</span></span>
           </nuxt-link>
         </div>
@@ -199,6 +199,12 @@
             max-width: 500px;
           }
 
+        }
+
+        &-type {
+          &-desk {
+            transform: rotate(68deg) translate(75%, 40px);
+          }
         }
 
       }

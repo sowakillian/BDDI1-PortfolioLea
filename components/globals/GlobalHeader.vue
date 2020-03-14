@@ -13,11 +13,13 @@
       <span :style="{ backgroundColor: navColor }"></span>
       <span :style="{ backgroundColor: navColor }"></span>
     </div>
-    <ul class="mobile-nav-list" v-bind:class="{ 'mobile-nav-list-active': isMobileMenuActive }">
-      <li @click="isMobileMenuActive = !isMobileMenuActive"><nuxt-link to="/projects">projets</nuxt-link></li>
-      <li @click="isMobileMenuActive = !isMobileMenuActive"><nuxt-link :to="{ path: '/',hash:'#lea'}">/éa</nuxt-link></li>
-      <li @click="isMobileMenuActive = !isMobileMenuActive"><nuxt-link :to="{ path: '/',hash:'#contact'}">contact</nuxt-link></li>
-    </ul>
+    <div class="mobile-nav-list" v-bind:class="{ 'mobile-nav-list-active': isMobileMenuActive }">
+      <span class="mobile-nav-list-marquee">LET'S CREATE LET'S CREATE LET'S CREATE</span>
+      <a :href="`mailto:lea.pradel@gmail.com`" class="mobile-nav-list-mail"><img src="~/assets/images/icon-email.svg"></a>
+      <div @click="isMobileMenuActive = !isMobileMenuActive"><nuxt-link to="/projects">projets</nuxt-link></div>
+      <div @click="isMobileMenuActive = !isMobileMenuActive"><nuxt-link :to="{ path: '/',hash:'#lea'}">/éa</nuxt-link></div>
+      <div @click="isMobileMenuActive = !isMobileMenuActive"><nuxt-link :to="{ path: '/',hash:'#contact'}">contact</nuxt-link></div>
+    </div>
   </div>
 </template>
 
@@ -90,13 +92,14 @@
 
 
       &-list {
+        overflow: hidden;
         background-image: url("../../assets/background-header.jpg");
         height: 100vh;
         background-color: white;
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding-top: 200px;
         align-items: center;
         position: fixed;
         left: 0;
@@ -105,11 +108,47 @@
         transform: translateX(-100%);
         transition: all 0.6s ease;
 
+        &-marquee {
+          font-size: 300px;
+          white-space: nowrap;
+          will-change: transform;
+          animation: marquee 32s linear infinite;
+          color: white;
+          position: absolute;       /* un peu d'espace pour la transition */
+          bottom: 50px;
+          z-index: 1;
+        }
+
+        @keyframes marquee {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+
+        &-mail {
+          background-color: black;
+          color: white;
+          width: 70px;
+          height: 290px;
+          transform: rotate(23deg);
+          position: absolute;
+          bottom: 0;
+          left: -35px;
+          z-index: 2;
+
+
+          img {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            transform: rotate(-23deg);
+          }
+        }
+
         &-active {
           transform: translateX(0);
         }
 
-        li {
+        & > * {
           margin-bottom: 50px;
           &:last-of-type {
             margin-bottom: 0;
