@@ -103,9 +103,17 @@
 
     }
 
+    @media all and (max-width: 1750px) {
+      &-title {
+        &-h1 {
+          font-size: 110px;
+        }
+      }
+    }
+
     @media all and (max-width: 1600px) {
       &-title {
-        h1 {
+        &-h1 {
           font-size: 100px;
         }
       }
@@ -113,20 +121,27 @@
 
     @media all and (max-width: 1280px) {
       &-title {
-        h1 {
+        &-h1 {
           font-size: 70px;
         }
       }
     }
 
     @media all and (max-width: 980px) {
+      padding: 0;
       &-content {
         flex-direction: column;
         justify-content: center;
+
+        .projects-slider {
+          width: 100%;
+          transform: scale(0.8);
+
+        }
       }
 
       &-title {
-        h1 {
+        &-h1 {
           font-size: 60px;
         }
       }

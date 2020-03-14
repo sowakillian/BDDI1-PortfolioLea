@@ -36,6 +36,10 @@ export default {
                     })
             })
         }
+    },
+
+    mounted() {
+      console.warn('im mounted')
     }
 
 

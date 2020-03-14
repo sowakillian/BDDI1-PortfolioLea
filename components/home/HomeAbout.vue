@@ -4,17 +4,9 @@
     <span class="home-about-marquee">
       LET'S CREATE
     </span>
-    <h2 v-rellax="{
-      // Rellax Options
-      // See: https://github.com/dixonandmoe/rellax#features
-      speed: -2,
-    }">/éa</h2>
+    <h2>/éa</h2>
     <div class="home-about-content">
-      <div v-html="description" class="home-about-presentation" v-rellax="{
-      // Rellax Options
-      // See: https://github.com/dixonandmoe/rellax#features
-      speed: -2,
-    }">
+      <div v-html="description" class="home-about-presentation">
       </div>
       <div class="home-about-photo" >
         <div class="home-about-photo-img" >
