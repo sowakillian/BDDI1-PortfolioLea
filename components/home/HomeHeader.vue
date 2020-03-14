@@ -152,6 +152,10 @@
 
     @media all and (max-width: 980px) {
       padding: 0;
+
+      &-marquee {
+        display: none;
+      }
       &-content {
         flex-direction: column;
         justify-content: center;

@@ -188,7 +188,22 @@
       font-size: 50px;
       margin-top: 40px;
       margin-left: 40px;
+      transform: translate3d(0px, 0px, 0px) !important;
     }
+    .project {
+      &-phone {
+        &-img {
+          &-desk {
+            left: 45%;
+            top: 25%;
+            max-width: 500px;
+          }
+
+        }
+
+      }
+    }
+
     .project-list {
 
       li {

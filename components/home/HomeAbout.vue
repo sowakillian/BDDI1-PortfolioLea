@@ -120,6 +120,10 @@
     }
 
     @media all and (max-width: 980px) {
+    &-marquee {
+      display: none;
+    }
+
     &-content {
       flex-direction: column;
 

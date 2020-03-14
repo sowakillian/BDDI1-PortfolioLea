@@ -199,6 +199,8 @@
 
     @media all and (max-width: 767px) {
       position: relative;
+      padding: 60px 40px 0 40px;
+
       &-list {
         display: none;
       }
