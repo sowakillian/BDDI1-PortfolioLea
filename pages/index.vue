@@ -15,6 +15,7 @@ import HomeContact from "../components/home/HomeContact";
 import Prismic from 'prismic-javascript'
 import { initApi, generatePageData } from '@/prismic.config'
 
+
 export default {
   components: {
     HomeHeader,
@@ -39,7 +40,9 @@ export default {
     },
 
     mounted() {
-      console.warn('im mounted')
+          setTimeout(() => {
+              this.$store.commit('CHANGE_OVERLAY_STATE', true);
+          }, 3000)
     }
 
 

@@ -7,13 +7,13 @@
       <li><nuxt-link :to="{ path: '/',hash:'#lea'}">/éa</nuxt-link></li>
       <li><nuxt-link :to="{ path: '/',hash:'#contact'}">contact</nuxt-link></li>
     </ul>
-    <div class="mobile-nav" id="menuToggle" @click="toggleMenu">
+    <div class="mobile-nav"  id="menuToggle" @click="toggleMenu">
       <input type="checkbox" />
-      <span></span>
-      <span></span>
-      <span></span>
+      <span :style="{ backgroundColor: navColor }"></span>
+      <span :style="{ backgroundColor: navColor }"></span>
+      <span :style="{ backgroundColor: navColor }"></span>
     </div>
-    <ul class="mobile-nav-list" :style="{ color: navColor }">
+    <ul class="mobile-nav-list">
       <li><nuxt-link to="/projects">projets</nuxt-link></li>
       <li><nuxt-link to="{ path: '/', hash:'#lea'}">/éa</nuxt-link></li>
       <li><nuxt-link to="{ path: '/', hash:'#contact'}">contact</nuxt-link></li>
@@ -89,7 +89,9 @@
       -webkit-user-select: none;
       user-select: none;
 
+
       &-list {
+        background-image: url("../../assets/background-header.jpg");
         height: 100vh;
         background-color: white;
         width: 100%;

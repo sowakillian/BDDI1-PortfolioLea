@@ -1,6 +1,11 @@
 
 <template>
   <div class="home-header">
+    <div class="home-header-overlay" v-bind:class="{ 'home-header-overlay-hidden': isOverlayHidden }">
+      <div class="home-header-overlay-title">
+        //
+      </div>
+    </div>
     <span class="home-header-marquee">
       Web/Graphic design
     </span>
@@ -14,7 +19,7 @@
         <span>DIGITAL DESIGNER</span>
       </div>
       <div class="projects-slider">
-        <project-slider />
+
       </div>
     </div>
   </div>
@@ -22,8 +27,12 @@
 
 <script>
   import ProjectSlider from '~/components/project/ProjectSlider.vue';
+  import { mapState } from 'vuex';
 
   export default {
+
+      computed: mapState(['isOverlayHidden']),
+
       components: {
           ProjectSlider
       },
@@ -46,30 +55,44 @@
       height: 100vh;
       position: fixed;
       background-image: url("../../assets/background-header.jpg");
+      background-color: white;
       left: 0;
       top: 0;
-      z-index: 4;
+      z-index: 400;
+
+
+      &-title {
+        font-size: 150px;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+      }
+
+
+      &-hidden {
+        transition: all 3s ease;
+        opacity: 0;
+        visibility: hidden;
+        //background-image: none;
+        //background-color: transparent;
+        //pointer-events: none;
+      }
     }
 
     &-marquee {
       font-size: 600px;
-      display: inline-block;
       white-space: nowrap;
-      animation: defilement-rtl 70s infinite linear;
+      will-change: transform;
+      animation: marquee 32s linear infinite;
       color: white;
-      position: absolute;
-      padding-right: 2em;                   /* un peu d'espace pour la transition */
-      left: 0;
+      position: absolute;       /* un peu d'espace pour la transition */
       top: 20%;
     }
 
-    @keyframes defilement-rtl {
-      0% {
-        transform: translate3d(0,0,0);      /* position initiale à droite */
-      }
-      100% {
-        transform: translate3d(-100%,0,0);  /* position finale à gauche */
-      }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
 
     &-title {
@@ -92,7 +115,6 @@
       display: flex;
       align-items: center;
       height: 100%;
-      justify-content: space-around;
       position: relative;
 
       .projects-slider {
@@ -141,6 +163,7 @@
       }
 
       &-title {
+        margin-top: 200px;
         &-h1 {
           font-size: 60px;
         }

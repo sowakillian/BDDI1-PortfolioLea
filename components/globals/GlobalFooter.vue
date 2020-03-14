@@ -21,7 +21,8 @@
   .global-footer {
     font-size: 20px;
     text-align: center;
-
-    margin: 140px 0 45px 0;
+    max-width: 80%;
+    margin: 140px auto 45px auto;
+    line-height: 30px;
   }
 </style>

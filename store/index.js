@@ -3,7 +3,8 @@ import Prismic from 'prismic-javascript'
 export const state = () => ({
   footer: {},
   projects: {},
-  navColor: "black"
+  navColor: "black",
+  isOverlayHidden: false
 });
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
   },
   CHANGE_NAV_COLOR (state, data) {
     state.navColor = data;
+  },
+  CHANGE_OVERLAY_STATE (state, data) {
+    state.isOverlayHidden = data;
   },
 };
 
