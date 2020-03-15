@@ -34,11 +34,19 @@ import axios from 'axios'
   .project-description {
     display: flex;
     padding: 130px 8%;
+    justify-content: space-between;
 
     &-title {
       font-size: 50px;
       margin-bottom: 45px;
     }
+
+    &-pitch {
+      margin-bottom: 230px;
+      width: 45%;
+    }
+
+
 
     &-text {
       font-size: 28px;
@@ -52,7 +60,7 @@ import axios from 'axios'
 
     &-solution {
       margin-top: 95px;
-      padding-left: 5%;
+      width: 40%;
     }
 
     @media all and (max-width: 1600px) {
