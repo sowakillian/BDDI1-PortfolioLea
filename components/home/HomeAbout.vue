@@ -4,9 +4,17 @@
     <span class="home-about-marquee">
       LET'S CREATE
     </span>
-    <h2>/éa</h2>
+    <h2 v-rellax="{
+      // Rellax Options
+      // See: https://github.com/dixonandmoe/rellax#features
+      speed: -2,
+    }">/éa</h2>
     <div class="home-about-content">
-      <div v-html="description" class="home-about-presentation">
+      <div v-html="description" class="home-about-presentation" v-rellax="{
+      // Rellax Options
+      // See: https://github.com/dixonandmoe/rellax#features
+      speed: -2,
+    }">
       </div>
       <div class="home-about-photo" >
         <div class="home-about-photo-img" >
@@ -114,12 +122,18 @@
 
     @media all and (max-width: 1280px) {
       margin: 100px 0 100px 0;
+
+      h2, &-presentation {
+        transform: translate3d(0px, 0px, 0px) !important;
+      }
+
       &-content {
         font-size: 22px;
       }
     }
 
     @media all and (max-width: 980px) {
+
     &-marquee {
       display: none;
     }

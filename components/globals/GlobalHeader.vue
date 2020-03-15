@@ -9,9 +9,9 @@
     </ul>
     <div class="mobile-nav"  id="menuToggle" @click="isMobileMenuActive = !isMobileMenuActive">
       <input type="checkbox" />
-      <span :style="{ backgroundColor: navColor }"></span>
-      <span :style="{ backgroundColor: navColor }"></span>
-      <span :style="{ backgroundColor: navColor }"></span>
+      <span v-bind:class="{'mobile-nav-span1-active mobile-nav-span-active':(isMobileMenuActive)}" :style="{ backgroundColor: navColor }"></span>
+      <span v-bind:class="{'mobile-nav-span2-active mobile-nav-span-active':(isMobileMenuActive)}" :style="{ backgroundColor: navColor }"></span>
+      <span v-bind:class="{'mobile-nav-span3-active mobile-nav-span-active':(isMobileMenuActive)}" :style="{ backgroundColor: navColor }"></span>
     </div>
     <div class="mobile-nav-list" v-bind:class="{ 'mobile-nav-list-active': isMobileMenuActive }">
       <span class="mobile-nav-list-marquee">LET'S CREATE LET'S CREATE LET'S CREATE</span>
@@ -163,38 +163,25 @@
         position: absolute;
         top: -7px;
         left: -5px;
-
         cursor: pointer;
-
         opacity: 0; /* hide this */
         z-index: 2; /* and place it over the hamburger */
-
         -webkit-touch-callout: none;
-
-
       }
 
-      input:checked ~ span
-      {
+      &-span-active {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
         background: #232323;
       }
 
-      input:checked ~ span:nth-of-type(2)
-      {
+      &-span2-active {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
       }
 
-      input:checked ~ span:nth-of-type(3)
-      {
+      &-span3-active {
         transform: rotate(-45deg) translate(0, -2px);
-      }
-
-      input:checked ~ ul
-      {
-        transform: none;
       }
 
       span {

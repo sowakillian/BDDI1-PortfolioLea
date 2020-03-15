@@ -213,11 +213,25 @@
     .project-list {
 
       li {
-        margin-top: 200px;
+        margin-top: 300px;
         &:nth-of-type(odd) {
-          margin-top: 200px;
+          margin-top: 300px;
         }
       }
     }
   }
+
+  @media all and (max-width: 480px) {
+    .project {
+      &-phone {
+        &-img {
+          &-desk {
+            max-width: 460px;
+          }
+        }
+      }
+    }
+  }
+
+
 </style>
