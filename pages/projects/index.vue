@@ -86,9 +86,10 @@
     transition: all .8s ease;
 
     &:hover {
-      //transform: scale(1.075) rotate(22deg);
+      transform: scale(1.05) rotate(22deg);
       //height: 580px;
       //width: 400px;
+      cursor: pointer;
 
       .project-more-symbol {
         //transform: translate(-45%, -35%) rotate(-203deg);
@@ -112,6 +113,7 @@
         top: 30%;
         transform: translate(-50%, -50%) rotate(-23deg);
         max-width: 640px;
+        pointer-events: none;
 
         &-desk {
           transform: translate(-50%, -20%) rotate(-23deg);
