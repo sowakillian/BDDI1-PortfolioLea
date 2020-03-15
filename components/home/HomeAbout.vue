@@ -4,22 +4,18 @@
     <span class="home-about-marquee">
       LET'S CREATE
     </span>
-    <h2 v-rellax="{
-      // Rellax Options
-      // See: https://github.com/dixonandmoe/rellax#features
-      speed: -2,
-    }">/éa</h2>
+    <h2>/éa</h2>
     <div class="home-about-content">
-      <div v-html="description" class="home-about-presentation" v-rellax="{
+      <div v-html="description" class="home-about-presentation">
+      </div>
+      <div class="home-about-photo"   v-rellax="{
       // Rellax Options
       // See: https://github.com/dixonandmoe/rellax#features
-      speed: -2,
+      speed: 2,
     }">
-      </div>
-      <div class="home-about-photo" >
         <div class="home-about-photo-img" >
-          <img src="~/assets/images/photo-lea.png" >
-          <a href="/cv-leapradel.pdf" target="_blank" class="home-about-photo-img-cv"><img src="~/assets/images/icon-pdf.png"><span>Voir mon CV</span></a>
+          <img src="~/assets/images/photo-lea.png">
+          <a href="/cv-leapradel.pdf" target="_blank" class="home-about-photo-img-cv" ><img src="~/assets/images/icon-pdf.png"><span>Voir mon CV</span></a>
         </div>
       </div>
     </div>
@@ -44,14 +40,19 @@
     &-marquee {
       font-size: 600px;
       display: inline-block;
-      white-space: nowrap;
-      animation: defilement-rtl 70s infinite linear;
       color: white;
-      position: absolute;
-      padding-right: 2em;                   /* un peu d'espace pour la transition */
+      position: absolute;       /* un peu d'espace pour la transition */
       left: 0;
       bottom: -500px;
       z-index: -1;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 32s linear infinite; /* un peu d'espace pour la transition */
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
 
     &-content {
@@ -85,7 +86,7 @@
         position: absolute;
 
         img {
-          max-width: 100%;
+          max-width: 140%;
         }
 
         a, a:visited {
@@ -127,6 +128,12 @@
 
     @media all and (max-width: 1280px) {
       margin: 100px 0 100px 0;
+      &-photo {
+        &-img {
+            transform: translate3d(0px, 0px, 0px) !important;
+
+        }
+      }
 
       h2, &-presentation {
         transform: translate3d(0px, 0px, 0px) !important;
