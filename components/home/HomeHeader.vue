@@ -102,6 +102,7 @@
       }
 
       span {
+        letter-spacing: calc((200 / 1000) * 1em);
         font-size: 30px;
         color: #FF4E50;
         font-family: 'GTWalsheim-Regular';

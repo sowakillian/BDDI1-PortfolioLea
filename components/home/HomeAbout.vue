@@ -88,6 +88,11 @@
           max-width: 100%;
         }
 
+        a, a:visited {
+          color: #FF4E50;
+        }
+
+
         &-cv {
           display:flex;
           position: absolute;
