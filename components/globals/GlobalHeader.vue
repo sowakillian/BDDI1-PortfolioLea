@@ -253,6 +253,17 @@
       }
     }
 
+    @media all and (max-height: 767px) {
+
+      .mobile-nav {
+        &-list {
+          &-marquee {
+            display: none;
+          }
+        }
+      }
+    }
+
 
   }
 </style>
