@@ -1,8 +1,15 @@
 
 <template>
   <div class="home-contact" id="contact">
-    <h2>contact</h2>
-    <div class="home-contact-content">
+    <h2 v-scroll-reveal ="{
+      distance: 0,
+      duration:1000,
+
+    }">contact</h2>
+    <div class="home-contact-content" v-scroll-reveal ="{
+      distance: 0,
+      duration: 1000,
+    }">
       <div v-html="coordonnees" class="home-contact-infos">
       </div>
 

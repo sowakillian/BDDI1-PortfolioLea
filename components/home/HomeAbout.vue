@@ -4,11 +4,17 @@
     <span class="home-about-marquee">
       LET'S CREATE
     </span>
-    <h2>/éa</h2>
+    <h2 v-scroll-reveal ="{
+      distance: 0,
+            duration:1000,
+    }">/éa</h2>
     <div class="home-about-content">
-      <div v-html="description" class="home-about-presentation">
+      <div v-html="description" class="home-about-presentation" v-scroll-reveal="{
+      distance: 0,
+            duration:1000,
+    }">
       </div>
-      <div class="home-about-photo"   v-rellax="{
+      <div class="home-about-photo" v-rellax="{
       // Rellax Options
       // See: https://github.com/dixonandmoe/rellax#features
       speed: 2,

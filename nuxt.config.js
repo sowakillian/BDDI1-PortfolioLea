@@ -36,7 +36,8 @@ export default {
     { src: '~/plugins/vue-scroll-reveal', ssr: false },
     { src: '~/plugins/vue-concise-slider', ssr: false },
     { src: '~/plugins/vue-concise-slider', ssr: false },
-    { src: '~/plugins/vue-rellax', ssr: false }
+    { src: '~/plugins/vue-rellax', ssr: false },
+    { src: '~/plugins/vue-smooth-scroll', ssr: false },
   ],
   /*
   ** Nuxt.js dev-modules
@@ -48,6 +49,7 @@ export default {
   prismic: {
     endpoint: 'https://leapradel-portfolio.cdn.prismic.io/api/v2',
   },
+
 
   generate: {
     routes: function() {
