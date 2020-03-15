@@ -143,6 +143,9 @@
     }
 
     @media all and (max-width: 1280px) {
+      &-marquee {
+        font-size: 300px;
+      }
       &-title {
         &-h1 {
           font-size: 70px;
@@ -154,7 +157,7 @@
       padding: 0;
 
       &-marquee {
-        display: none;
+        top: 10%;
       }
       &-content {
         flex-direction: column;

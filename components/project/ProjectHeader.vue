@@ -153,6 +153,11 @@
       &-content {
         text-align: center;
         margin: 0 auto;
+        transform: translate3d(0px, 0px, 0px) !important;
+        
+        &-year {
+          overflow: visible;
+        }
         &-title {
           overflow: visible;
           font-size: 40px;

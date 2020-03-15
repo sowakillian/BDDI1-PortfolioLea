@@ -20,6 +20,9 @@ export const mutations = {
   CHANGE_OVERLAY_STATE (state, data) {
     state.isOverlayHidden = data;
   },
+  CHANGE_TACOS_AVAILABILITY (state, data) {
+    state.tacos = data;
+  },
 };
 
 export const actions = {

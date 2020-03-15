@@ -19,7 +19,7 @@
       <div class="home-about-photo" >
         <div class="home-about-photo-img" >
           <img src="~/assets/images/photo-lea.png" >
-          <span class="home-about-photo-img-cv"><img src="~/assets/images/icon-pdf.png"><span>Voir mon CV</span></span>
+          <a href="/cv-leapradel.pdf" target="_blank" class="home-about-photo-img-cv"><img src="~/assets/images/icon-pdf.png"><span>Voir mon CV</span></a>
         </div>
       </div>
     </div>
