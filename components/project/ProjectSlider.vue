@@ -94,13 +94,13 @@
     height: 900px;
     display: flex;
     width: 650px;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    padding-bottom: 100px;
 
     &-nav {
       display:flex;
       align-items: center;
+      justify-content: center;
 
       &-numbers {
         margin: 0 30px;
@@ -146,7 +146,7 @@
      &-img {
        position: absolute;
        left: 30%;
-       top: 30%;
+       top: 40%;
        transform: translate(-50%, -50%) rotate(-23deg);
        max-width: 640px;
        pointer-events: none;
@@ -156,7 +156,7 @@
        }
 
        &-desk {
-         transform: translate(-50%, -20%) rotate(-23deg);
+         transform: translate(-50%, -30%) rotate(-23deg);
        }
      }
    }
