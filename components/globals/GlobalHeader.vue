@@ -57,6 +57,11 @@
       position: fixed;
       bottom: 0;
       left: -35px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: rotate(28deg);
+      }
 
       img {
         position: absolute;
