@@ -1,7 +1,8 @@
 
 <template>
-  <slider ref="slider" :options="options">
-    <slider-item v-for="(project, index) in projects">
+  <div>
+  <div class="project-slider">
+    <div class="mySlides fade" v-for="(project, index) in projects">
       <div class="project-slider-item" :style="{ backgroundColor: project.data.color }">
         <nuxt-link :to="`/projects/${project.uid}`" class="project-slider-item-phone">
           <img v-bind:class="{'project-slider-item-phone-img':true, 'project-slider-item-phone-img-desk':(project.data.phonemockupisdesk === true)}" :src="project.data.phonemockup.url" />
@@ -9,35 +10,83 @@
           <span class="project-slider-item-more"><span class="project-slider-item-more-symbol">+</span><span class="project-slider-item-more-text">voir le projet</span></span>
         </nuxt-link>
       </div>
-    </slider-item>
-  </slider>
+    </div>
+  </div>
+
+    <a class="prev" @click="moveSlide(-1)">&#10094;</a>
+    <a class="next" @click="moveSlide(1)">&#10095;</a>
+  <div style="text-align:center">
+    <span class="dot" v-for="(project, index) in projects" @click="currentSlide(index)"></span>
+  </div>
+  </div>
 </template>
 
 <script>
   import { mapState } from 'vuex';
+  let slideIndex = 1;
+
   export default {
       computed: mapState(['projects']),
 
-      data () {
-          return {
-              options: {
-                  effect: 'fade',
-                  loop: true,
-                  speed: 1500
-              }
-          }
+      mounted() {
+          this.showSlides(slideIndex);
       },
+
+      methods: {
+
+          currentSlide (n) {
+            this.showSlides(slideIndex = n)
+          },
+
+          moveSlide (n) {
+              this.showSlides(slideIndex += n);
+          },
+
+          showSlides (n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.visibility = "hidden";
+                  slides[i].style.opacity = 0;
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.visibility = "visible";
+              slides[slideIndex-1].style.opacity = 1;
+              dots[slideIndex-1].className += " active";
+          }
+      }
+
   }
 </script>
 
 <style lang="scss">
+
+  .mySlides {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 2s ease;
+    position: absolute;
+  }
+  .project-slider {
+    overflow: hidden;
+    height: 900px;
+    display: flex;
+    width: 650px;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
  .project-slider-item {
    height: 550px;
    width: 382px;
    background-color: #4BD079;
    transform: rotate(23deg);
    position: relative;
-   margin-top: 100px;
 
    &-phone {
      display: block;
@@ -57,6 +106,11 @@
        top: 30%;
        transform: translate(-50%, -50%) rotate(-23deg);
        max-width: 640px;
+       pointer-events: none;
+
+       img {
+         pointer-events: none;
+       }
 
        &-desk {
          transform: translate(-50%, -20%) rotate(-23deg);

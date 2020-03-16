@@ -47,7 +47,7 @@
     padding: 60px 80px 0 80px;
 
     a, a:visited {
-      mix-blend-mode: difference;
+     mix-blend-mode: difference;
     }
 
 

@@ -12,10 +12,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' },
+      { rel: 'stylesheet', type: 'text/css', href: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' }
     ]
   },
   /*
@@ -34,8 +37,6 @@ export default {
   */
   plugins: [
     { src: '~/plugins/vue-scroll-reveal', ssr: false },
-    { src: '~/plugins/vue-concise-slider', ssr: false },
-    { src: '~/plugins/vue-concise-slider', ssr: false },
     { src: '~/plugins/vue-rellax', ssr: false },
     { src: '~/plugins/vue-smooth-scroll', ssr: false },
   ],
@@ -115,6 +116,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    transpile: ['vue-slick'],
     extend (config, ctx) {
     }
   }

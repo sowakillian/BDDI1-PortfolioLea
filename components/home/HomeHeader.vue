@@ -18,9 +18,7 @@
         <div class="home-header-title-h1">/éa Prade/</div>
         <span>DIGITAL DESIGNER</span>
       </div>
-      <div class="projects-slider">
-
-      </div>
+      <project-slider />
     </div>
   </div>
 </template>
@@ -117,12 +115,8 @@
       display: flex;
       align-items: center;
       height: 100%;
+      justify-content: space-between;
       position: relative;
-
-      .projects-slider {
-        width: 40%;
-        height: 900px;
-      }
 
 
     }

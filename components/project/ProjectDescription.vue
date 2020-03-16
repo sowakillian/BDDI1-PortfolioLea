@@ -35,7 +35,7 @@ import axios from 'axios'
     display: flex;
     padding: 130px 8%;
     justify-content: space-between;
-    background-color: white;
+     background-color: white;
 
     &-title {
       font-size: 50px;
