@@ -135,10 +135,7 @@
     @media all and (max-width: 1280px) {
       margin: 100px 0 100px 0;
       &-photo {
-        &-img {
             transform: translate3d(0px, 0px, 0px) !important;
-
-        }
       }
 
       h2, &-presentation {

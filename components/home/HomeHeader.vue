@@ -41,12 +41,12 @@
 
 <style lang="scss">
   .home-header {
-    height: 100vh;
     width: 100%;
     padding: 0 5% 0 5%;
     font-size: 30px;
     position: relative;
     margin-top: -120px;
+    height: 100vh;
 
     &-overlay {
       width: 100%;

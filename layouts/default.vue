@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout-basic">
     <global-header  />
     <nuxt />
 
@@ -25,6 +25,11 @@ export default {
 </script>
 
 <style>
+
+  .layout-basic {
+    z-index: 2;
+    position: relative;
+  }
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
