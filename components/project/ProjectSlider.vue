@@ -13,8 +13,12 @@
     </div>
   </div>
 
-    <a class="prev" @click="moveSlide(-1)">&#10094;</a>
-    <a class="next" @click="moveSlide(1)">&#10095;</a>
+    <div class="project-slider-nav">
+      <a class="project-slider-prev" @click="moveSlide(-1)"><img src="~/assets/images/icon-back.svg"></a>
+      <span class="project-slider-nav-numbers"><span class="project-slider-nav-number-current">01 </span>/<span class="project-slider-nav-number-total"> 03</span></span>
+      <a class="project-slider-next" @click="moveSlide(1)"><img src="~/assets/images/icon-back.svg"></a>
+    </div>
+
   <div style="text-align:center">
     <span class="dot" v-for="(project, index) in projects" @click="currentSlide(index)"></span>
   </div>
@@ -45,7 +49,9 @@
           showSlides (n) {
               let i;
               let slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
+              const dots = document.getElementsByClassName("dot");
+              const currentSlide = document.querySelector(".project-slider-nav-number-current");
+              const totalSlides = document.querySelector(".project-slider-nav-number-total");
               if (n > slides.length) {slideIndex = 1}
               if (n < 1) {slideIndex = slides.length}
               for (i = 0; i < slides.length; i++) {
@@ -55,6 +61,9 @@
               for (i = 0; i < dots.length; i++) {
                   dots[i].className = dots[i].className.replace(" active", "");
               }
+              console.warn(currentSlide)
+              currentSlide.innerHTML = `0${n-1} `;
+              totalSlides.innerHTML = ` 0${slides.length} `;
               slides[slideIndex-1].style.visibility = "visible";
               slides[slideIndex-1].style.opacity = 1;
               dots[slideIndex-1].className += " active";
@@ -80,6 +89,32 @@
     align-items: flex-end;
     justify-content: center;
     padding-bottom: 100px;
+
+    &-nav {
+      display:flex;
+      align-items: center;
+
+      &-numbers {
+        margin: 0 30px;
+        font-size: 20px;
+      }
+    }
+
+    &-prev, &-next {
+      width: 35px;
+      &:hover {
+        cursor: pointer
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &-next {
+      img {
+        transform: rotate(180deg);
+      }
+    }
   }
  .project-slider-item {
    height: 550px;
