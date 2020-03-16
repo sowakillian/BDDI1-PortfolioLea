@@ -48,6 +48,8 @@
 
           showSlides (n) {
               let i;
+              let isSevenPassed = false;
+              let isFirstPassed = false;
               let slides = document.getElementsByClassName("mySlides");
               const dots = document.getElementsByClassName("dot");
               const currentSlide = document.querySelector(".project-slider-nav-number-current");
@@ -62,7 +64,13 @@
                   dots[i].className = dots[i].className.replace(" active", "");
               }
               console.warn(currentSlide)
-              currentSlide.innerHTML = `0${n-1} `;
+
+              if (n === slides.length+1) {
+                  currentSlide.innerHTML = `01 `;
+              } else {
+                  currentSlide.innerHTML = `0${n} `;
+              }
+
               totalSlides.innerHTML = ` 0${slides.length} `;
               slides[slideIndex-1].style.visibility = "visible";
               slides[slideIndex-1].style.opacity = 1;
