@@ -117,8 +117,8 @@
       height: 100%;
       justify-content: space-between;
       position: relative;
-
-
+      width: 95%;
+      margin: 0 auto;
     }
 
     @media all and (max-width: 1750px) {
@@ -130,6 +130,9 @@
     }
 
     @media all and (max-width: 1600px) {
+      &-content {
+        width: 100%;
+      }
       &-title {
         &-h1 {
           font-size: 100px;
@@ -137,7 +140,7 @@
       }
     }
 
-    @media all and (max-width: 1280px) {
+    @media all and (max-width: 1350px) {
       &-marquee {
         font-size: 300px;
       }
