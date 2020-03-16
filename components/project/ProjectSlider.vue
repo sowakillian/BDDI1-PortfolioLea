@@ -191,4 +191,35 @@
      }
    }
  }
+
+  @media all and (max-width: 767px) {
+    .project-slider {
+      height: 600px;
+    }
+    .project-slider-item {
+      height: 360px;
+      width: 250px;
+
+      &-more {
+        width: 45px;
+        height: 45px;
+
+        &-symbol {
+          font-size: 40px;
+          left: 48%;
+          top: 45%;
+        }
+      }
+
+      &-phone {
+        &-type {
+          font-size: 15px;
+          transform: rotate(68deg) translate(75%, 60px);
+        }
+        &-img {
+          max-width: 410px;
+        }
+      }
+    }
+  }
 </style>

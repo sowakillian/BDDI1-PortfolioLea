@@ -153,9 +153,10 @@
 
     @media all and (max-width: 980px) {
       padding: 0;
+      height: auto;
 
       &-marquee {
-        top: 10%;
+        top: 80px;
       }
       &-content {
         flex-direction: column;
@@ -174,11 +175,23 @@
         &-h1 {
           font-size: 60px;
         }
+
+        span {
+          font-size: 20px;
+          padding-right: 30px;
+        }
       }
     }
 
+
+
     @media all and (max-width: 420px) {
       padding: 0;
+
+
+      &-marquee {
+
+      }
 
       &-title {
         &-h1 {
@@ -186,7 +199,7 @@
         }
 
         span {
-          font-size: 20px;
+          font-size: 15px;
         }
       }
     }

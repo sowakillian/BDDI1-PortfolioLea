@@ -164,7 +164,7 @@
     &-photo {
       &-img {
         position: relative;
-        transform: translate(35%, 0%);
+        transform: translate(10%, 0%);
       }
     }
 
