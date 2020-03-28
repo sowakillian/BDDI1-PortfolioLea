@@ -1,16 +1,23 @@
 <template>
   <div class="project-images" :style="{ backgroundColor: color }">
     <div class="project-images-phonemockup">
-      <span class="project-images-phonemockup-img">
+      <span v-bind:class="{'project-images-phonemockup-img-desk':(phonemockupisdesk)}" class="project-images-phonemockup-img">
         <img :src="phonemockup"/>
         <span class="project-images-phonemockup-img-skills">
           {{ skills }}
         </span>
       </span>
     </div>
-    <div class="project-images-deskmockup">
-      <img :src="deskmockup" />
+    <div v-if="template === 'evenement'" class="project-images-levenement">
+      <div class="project-images-levenement-video">
+
+      </div>
+      <div class="project-images-levenement-images">
+        <img :src="imgright1"/>
+        <img :src="imgright2"/>
+      </div>
     </div>
+
   </div>
 </template>
 
@@ -20,17 +27,22 @@
             'color',
             'skills',
             'deskmockup',
-            'phonemockup'
-        ]
+            'phonemockup',
+            'phonemockupisdesk',
+            'template',
+            'imgright1',
+            'imgright2'
+        ],
+
     };
 </script>
 
 <style lang="scss">
   .project-images {
-    padding-top: 80px;
     display: flex;
-    justify-content: flex-end;
     position: relative;
+    padding: 0 8%;
+    margin-bottom: 300px;
 
     &-phonemockup {
       width: 35%;
@@ -41,6 +53,14 @@
 
       &-img {
         display: block;
+
+        &-desk {
+          transform: translateY(-15%);
+
+          .project-images-phonemockup-img-skills {
+            transform: translateX(-15%);
+          }
+        }
 
         &-skills {
           position: absolute;
@@ -62,6 +82,31 @@
         max-width: 100%;
         display: block;
         margin-left: auto;
+      }
+    }
+
+    &-levenement {
+      margin-top: 160px;
+      display: flex;
+      width: 100%;
+      transform: translateY(140px);
+
+      &-video {
+        width: 100%;
+        height: 100%;
+        margin-right: 42px;
+        background-color: black
+      }
+
+      &-images {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          &:first-of-type {
+            margin-bottom: 28px;
+          }
+        }
       }
     }
 

@@ -53,7 +53,11 @@ export const generatePageData = (documentType, data) => {
         background: data.background.url,
         color: data.color,
         phonemockup: data.phonemockup.url,
+        phonemockupisdesk: data.phonemockupisdesk,
         deskmockup: data.deskmockup.url,
+        imgright1: data.imgright1.url,
+        imgright2: data.imgright2.url,
+        template: data.template,
       }
   }
 };
