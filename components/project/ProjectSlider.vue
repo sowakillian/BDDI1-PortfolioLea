@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div class="project-slider-wrapper">
   <div class="project-slider">
     <div class="mySlides fade" v-for="(project, index) in projects">
       <div class="project-slider-item" :style="{ backgroundColor: project.data.color }">
@@ -195,6 +195,24 @@
   @media all and (max-width: 767px) {
     .project-slider {
       height: 600px;
+
+      &-wrapper {
+        position: relative;
+      }
+
+      &-prev {
+        display: none;
+      }
+
+      &-nav {
+        position: absolute;
+        right: 20%;
+        top: 70%;
+
+        &-numbers {
+          display: none;
+        }
+      }
     }
     .project-slider-item {
       height: 360px;
@@ -212,6 +230,11 @@
       }
 
       &-phone {
+        &-img {
+          &-desk {
+            transform: translate(-40%, -30%) rotate(-23deg);
+          }
+        }
         &-type {
           font-size: 15px;
           transform: rotate(68deg) translate(75%, 60px);
@@ -220,6 +243,12 @@
           max-width: 410px;
         }
       }
+    }
+  }
+
+  @media all and (max-width: 480px) {
+    .project-slider-nav {
+      right: 28%;
     }
   }
 </style>

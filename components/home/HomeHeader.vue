@@ -57,8 +57,7 @@
       left: 0;
       top: 0;
       z-index: 400;
-      display: none;
-
+      //display: none;
 
       &-title {
         font-size: 150px;
