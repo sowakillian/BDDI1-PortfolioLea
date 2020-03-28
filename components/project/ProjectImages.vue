@@ -10,7 +10,7 @@
     </div>
     <div v-if="template === 'evenement'" class="project-images-levenement">
       <div class="project-images-levenement-video">
-
+        <video autoplay loop src="~/assets/images/projects/video-levenement.mov"></video>
       </div>
       <div class="project-images-levenement-images">
         <img :src="imgright1"/>
@@ -29,7 +29,7 @@
     </div>
 
     <div v-if="template === 'labfive'" class="project-images-labfive">
-      <div class="project-images--deskmockup" >
+      <div class="project-images-deskmockup" >
         <img :src="deskmockup"/>
       </div>
 
@@ -47,13 +47,13 @@
       </div>
 
       <div class="project-images-lecerf-video">
-
+        <video autoplay loop src="~/assets/images/projects/video-lecerf.mov"></video>
       </div>
     </div>
 
     <div v-if="template === 'millet'" class="project-images-millet">
       <div class="project-images-millet-video" >
-
+        <video autoplay loop src="~/assets/images/projects/video-millet.mov"></video>
       </div>
 
       <div class="project-images-millet-img">
@@ -146,13 +146,15 @@
     &-millet {
       display: flex;
       margin-top: 40px;
+      width: 100%;
 
       &-video {
-        margin-top: 94px;
-        width: 1140px;
-        height: 640px;
-        background-color: black;
-        transform: translateY(196px);
+        max-width: 1200px;
+        video {
+          max-width: 100%;
+        }
+        margin-top: 200px;
+        transform: translateY(100px);
       }
 
       &-img{
@@ -172,9 +174,10 @@
 
       &-video {
         width: 100%;
-        height: 100%;
         margin-right: 42px;
-        background-color: black
+        video {
+          max-width: 100%;
+        }
       }
 
       &-images {
@@ -222,9 +225,12 @@
       &-video {
         background-color: black;
         width: 100%;
-        height: 800px;
         transform: translateY(160px);
         margin-top: -160px;
+
+        video {
+          max-width: 100%;
+        }
       }
     }
 
