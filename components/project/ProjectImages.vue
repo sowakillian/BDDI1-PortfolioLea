@@ -28,6 +28,19 @@
       </div>
     </div>
 
+    <div v-if="template === 'labfive'" class="project-images-labfive">
+      <div class="project-images-labfive-deskmockup" >
+        <img :src="deskmockup"/>
+      </div>
+
+      <div class="project-images-labfive-bottom">
+        <div class="project-images-labfive-bottom-phonevideo"></div>
+        <div class="project-images-labfive-bottom-imgright2">
+          <img :src="imgright2"/>
+        </div>
+      </div>
+    </div>
+
     <div v-if="template === 'spacex'" class="project-images-spacex">
       <div class="project-images-spacex-video" >
         <video autoplay loop src="~/assets/images/projects/video-spacex.mov"></video>
@@ -148,6 +161,32 @@
 
         video {
           max-width: 100%;
+        }
+      }
+    }
+
+    &-labfive {
+      width: 100%;
+      margin-top: 110px;
+
+      &-deskmockup {
+        margin-bottom: 30px;
+        width: 85%;
+        transform: translateX(110px);
+        margin-left: auto;
+        img {
+          max-width: 100%;
+        }
+      }
+
+      &-bottom {
+        display: flex;
+        justify-content: space-around;
+        &-phonevideo {
+          width: 400px;
+          height: 800px;
+          background-color: black;
+          transform: translateY(160px);
         }
       }
     }
