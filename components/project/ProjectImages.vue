@@ -1,7 +1,7 @@
 <template>
   <div class="project-images" :style="{ backgroundColor: color }">
     <div class="project-images-phonemockup">
-      <span v-bind:class="{'project-images-phonemockup-img-desk':(phonemockupisdesk)}" class="project-images-phonemockup-img">
+      <span v-bind:class="{'project-images-phonemockup-img-desk':(phonemockupisdesk), 'project-images-phonemockup-img-icecream':(template === 'icecream')}" class="project-images-phonemockup-img">
         <img :src="phonemockup"/>
         <span class="project-images-phonemockup-img-skills">
           {{ skills }}
@@ -13,6 +13,16 @@
 
       </div>
       <div class="project-images-levenement-images">
+        <img :src="imgright1"/>
+        <img :src="imgright2"/>
+      </div>
+    </div>
+
+    <div v-if="template === 'icecream'" class="project-images-icecream">
+      <div class="project-images-icecream-video" >
+
+      </div>
+      <div class="project-images-icecream-images">
         <img :src="imgright1"/>
         <img :src="imgright2"/>
       </div>
@@ -65,6 +75,14 @@
 
           .project-images-phonemockup-img-skills {
             transform: translateX(-15%);
+          }
+        }
+
+        &-icecream {
+          transform: translateY(0%);
+
+          .project-images-phonemockup-img-skills {
+            transform: translateX(-5%);
           }
         }
 
@@ -131,6 +149,28 @@
         video {
           max-width: 100%;
         }
+      }
+    }
+
+    &-icecream {
+      display: flex;
+      margin-top: 160px;
+      width: 100%;
+      transform: translateY(140px);
+      &-video {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        margin-right: 32px;
+      }
+      &-images {
+        img {
+          &:first-of-type {
+            margin-bottom: 32px;
+          }
+        }
+        display: flex;
+        flex-direction: column;
       }
     }
 
