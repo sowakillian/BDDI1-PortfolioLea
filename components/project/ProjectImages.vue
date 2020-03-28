@@ -18,6 +18,12 @@
       </div>
     </div>
 
+    <div v-if="template === 'spacex'" class="project-images-spacex">
+      <div class="project-images-spacex-video" >
+        <video autoplay loop src="~/assets/images/projects/video-spacex.mov"></video>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -106,6 +112,24 @@
           &:first-of-type {
             margin-bottom: 28px;
           }
+        }
+      }
+    }
+
+    &-spacex {
+      margin-top: 160px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      transform: translateY(140px);
+
+      &-video {
+        max-width: 1200px;
+        background-color: black;
+
+
+        video {
+          max-width: 100%;
         }
       }
     }

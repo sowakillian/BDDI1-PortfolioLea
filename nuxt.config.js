@@ -118,6 +118,12 @@ export default {
     */
     transpile: ['vue-slick'],
     extend (config, ctx) {
+      config.module.rules.push(
+        {
+          test: /\.mov$/,
+          loader: 'file-loader'
+        }
+      )
     }
   }
 }

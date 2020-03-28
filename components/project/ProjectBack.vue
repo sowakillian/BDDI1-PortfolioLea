@@ -16,6 +16,7 @@
     font-size: 30px;
     display: flex;
     align-items: center;
+    background-color: white;
 
     &-arrow {
       margin-right: 26px;

@@ -1,5 +1,5 @@
-<template>
-  <div class="container">
+<template >
+  <div class="container project-template">
     <project-header :color="color" :title="title" :type="type" :year="year" :background="background"/>
     <project-description :pitch="pitch" :solution="solution" :color="color"/>
     <project-images :color="color" :skills="skills" :phonemockup="phonemockup" :deskmockup="deskmockup" :template="template" :imgright1="imgright1" :imgright2="imgright2" :phonemockupisdesk="phonemockupisdesk"/>
@@ -64,5 +64,7 @@
 </script>
 
 <style>
-
+.project-template {
+  background-color: white;
+}
 </style>

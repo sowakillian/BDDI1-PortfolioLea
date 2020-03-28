@@ -80,6 +80,19 @@ import axios from 'axios'
         font-size: 35px;
       }
 
+      &-pitch, &-solution {
+        width: 100%;
+      }
+
+      &-pitch {
+        margin-bottom: 0;
+      }
+
+      &-solution {
+        margin-top: 40px;
+        margin-bottom: 200px
+      }
+
       &-solution {
         padding-left: 0;
       }
