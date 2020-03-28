@@ -29,7 +29,7 @@
     </div>
 
     <div v-if="template === 'labfive'" class="project-images-labfive">
-      <div class="project-images-labfive-deskmockup" >
+      <div class="project-images--deskmockup" >
         <img :src="deskmockup"/>
       </div>
 
@@ -38,6 +38,26 @@
         <div class="project-images-labfive-bottom-imgright2">
           <img :src="imgright2"/>
         </div>
+      </div>
+    </div>
+
+    <div v-if="template === 'lecerf'" class="project-images-lecerf">
+      <div class="project-images-deskmockup" >
+        <img :src="deskmockup"/>
+      </div>
+
+      <div class="project-images-lecerf-video">
+
+      </div>
+    </div>
+
+    <div v-if="template === 'millet'" class="project-images-millet">
+      <div class="project-images-millet-video" >
+
+      </div>
+
+      <div class="project-images-millet-img">
+        <img :src="imgright1"/>
       </div>
     </div>
 
@@ -114,11 +134,33 @@
     }
 
     &-deskmockup {
-      width: 76%;
+      margin-bottom: 30px;
+      width: 85%;
+      transform: translateX(110px);
+      margin-left: auto;
       img {
         max-width: 100%;
-        display: block;
-        margin-left: auto;
+      }
+    }
+
+    &-millet {
+      display: flex;
+      margin-top: 40px;
+
+      &-video {
+        margin-top: 94px;
+        width: 1140px;
+        height: 640px;
+        background-color: black;
+        transform: translateY(196px);
+      }
+
+      &-img{
+        width: 594px;
+        transform: translateX(130px);
+        img {
+          max-width: 100%;
+        }
       }
     }
 
@@ -162,6 +204,27 @@
         video {
           max-width: 100%;
         }
+      }
+    }
+
+    &-lecerf {
+      width: 100%;
+      &-deskmockup {
+        margin-bottom: 30px;
+        width: 85%;
+        transform: translateX(110px);
+        margin-left: auto;
+        img {
+          max-width: 100%;
+        }
+      }
+
+      &-video {
+        background-color: black;
+        width: 100%;
+        height: 800px;
+        transform: translateY(160px);
+        margin-top: -160px;
       }
     }
 
