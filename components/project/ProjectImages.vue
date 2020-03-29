@@ -10,7 +10,7 @@
     </div>
     <div v-if="template === 'evenement'" class="project-images-levenement">
       <div class="project-images-levenement-video">
-        <video autoplay loop src="~/assets/images/projects/video-levenement.mov"></video>
+        <video autoplay loop src="http://sowakillian.fr/portfolio-lea/videos/video-levenement-c.mov"></video>
       </div>
       <div class="project-images-levenement-images">
         <img :src="imgright1"/>
@@ -20,7 +20,7 @@
 
     <div v-if="template === 'icecream'" class="project-images-icecream">
       <div class="project-images-icecream-video" >
-
+        <video autoplay loop src="http://sowakillian.fr/portfolio-lea/videos/video-icecream-c.mp4"></video>
       </div>
       <div class="project-images-icecream-images">
         <img :src="imgright1"/>
@@ -34,7 +34,9 @@
       </div>
 
       <div class="project-images-labfive-bottom">
-        <div class="project-images-labfive-bottom-phonevideo"></div>
+        <div class="project-images-labfive-bottom-phonevideo">
+          <video autoplay loop src="http://sowakillian.fr/portfolio-lea/videos/video-labfive-c.mp4"></video>
+        </div>
         <div class="project-images-labfive-bottom-imgright2">
           <img :src="imgright2"/>
         </div>
@@ -47,13 +49,13 @@
       </div>
 
       <div class="project-images-lecerf-video">
-        <video autoplay loop src="~/assets/images/projects/video-lecerf.mov"></video>
+
       </div>
     </div>
 
     <div v-if="template === 'millet'" class="project-images-millet">
       <div class="project-images-millet-video" >
-        <video autoplay loop src="~/assets/images/projects/video-millet.mov"></video>
+        <video autoplay loop src="http://sowakillian.fr/portfolio-lea/videos/video-millet-c.mov"></video>
       </div>
 
       <div class="project-images-millet-img">
@@ -63,7 +65,7 @@
 
     <div v-if="template === 'spacex'" class="project-images-spacex">
       <div class="project-images-spacex-video" >
-        <video autoplay loop src="~/assets/images/projects/video-spacex.mov"></video>
+        <video autoplay loop src="http://sowakillian.fr/portfolio-lea/videos/video-spacex-c.mov"></video>
       </div>
     </div>
 
@@ -113,6 +115,8 @@
 
         &-icecream {
           transform: translateY(0%);
+
+
 
           .project-images-phonemockup-img-skills {
             transform: translateX(-5%);
@@ -237,6 +241,7 @@
     &-labfive {
       width: 100%;
       margin-top: 110px;
+      margin-bottom: 80px;
 
       &-deskmockup {
         margin-bottom: 30px;
@@ -256,6 +261,9 @@
           height: 800px;
           background-color: black;
           transform: translateY(160px);
+          video {
+            max-width: 100%;
+          }
         }
       }
     }
@@ -264,15 +272,20 @@
       display: flex;
       margin-top: 160px;
       width: 100%;
+      justify-content: center;
       transform: translateY(140px);
       &-video {
-        width: 100%;
-        height: 100%;
-        background-color: black;
+        display: flex;
+        width: 710px;
         margin-right: 32px;
+          video {
+            max-width: 100%;
+          }
+
       }
       &-images {
         img {
+          width: 100%;
           &:first-of-type {
             margin-bottom: 32px;
           }
@@ -282,7 +295,25 @@
       }
     }
 
+    @media all and (max-width: 1440px) {
+      &-icecream {
+        margin-top: 70px;
+      }
+    }
+
     @media all and (max-width: 1280px) {
+      &-millet {
+        &-video {
+          margin-top: 60px;
+        }
+        &-img {
+          display: none;
+        }
+      }
+
+      &-icecream {
+        margin-top: 50px;
+      }
     &-phonemockup {
 
       &-img {
@@ -295,12 +326,25 @@
     }
   }
 
+    @media all and (max-width: 980px) {
+      &-millet {
+        &-video {
+          margin-top: 20px;
+        }
+      }
+
+      &-icecream {
+        margin-top: 0px;
+      }
+    }
+
     @media all and (max-width: 767px) {
       display: block;
       margin-top: 100px;
       &-deskmockup {
         width: 100%;
         margin-top: -260px;
+        transform: translateX(0);
       }
       &-phonemockup {
         position: static;
@@ -309,6 +353,12 @@
         margin: 0 auto;
         left: 0;
         &-img {
+
+          &-desk {
+            .project-images-phonemockup-img-skills {
+              transform: translateX(-50%);
+            }
+          }
 
           &-skills {
             font-size: 22px;
@@ -323,6 +373,14 @@
     }
 
     @media all and (max-width: 480px) {
+      padding-top: 100px;
+      margin-bottom: 80px;
+
+      &-lecerf {
+        &-video {
+          display: none;
+        }
+      }
       &-phonemockup {
         &-img {
           &-skills {

@@ -73,7 +73,7 @@ import axios from 'axios'
 
     @media all and (max-width: 767px) {
       flex-direction: column;
-      padding: 80px 6%;
+      padding: 50px 6%;
 
       &-title {
         margin-bottom: 20px;
@@ -90,7 +90,7 @@ import axios from 'axios'
 
       &-solution {
         margin-top: 40px;
-        margin-bottom: 200px
+        margin-bottom: 0;
       }
 
       &-solution {

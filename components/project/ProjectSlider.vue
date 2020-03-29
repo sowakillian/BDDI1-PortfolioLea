@@ -130,6 +130,7 @@
    background-color: #4BD079;
    transform: rotate(23deg);
    position: relative;
+   box-shadow: 9px 60px 99px rgba(0, 0, 0, .16);
 
    &-phone {
      display: block;
