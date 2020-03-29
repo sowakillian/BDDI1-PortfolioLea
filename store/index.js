@@ -4,6 +4,7 @@ export const state = () => ({
   footer: {},
   projects: {},
   navColor: "black",
+  footerBg: "transparent",
   isOverlayHidden: false
 });
 
@@ -17,11 +18,11 @@ export const mutations = {
   CHANGE_NAV_COLOR (state, data) {
     state.navColor = data;
   },
+  CHANGE_FOOTER_BG (state, data) {
+    state.footerBg = data;
+  },
   CHANGE_OVERLAY_STATE (state, data) {
     state.isOverlayHidden = data;
-  },
-  CHANGE_TACOS_AVAILABILITY (state, data) {
-    state.tacos = data;
   },
 };
 

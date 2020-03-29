@@ -26,14 +26,24 @@
                     this.$store.commit('CHANGE_NAV_COLOR', "black");
                 }
             },
+            changeFooterBg (type) {
+                if (type === 'created') {
+                    this.$store.commit('CHANGE_FOOTER_BG', "white");
+                    console.warn('footer is now white')
+                } else {
+                    this.$store.commit('CHANGE_FOOTER_BG', "transparent");
+                }
+            },
         },
 
         created() {
             this.changeNavColor('created');
+            this.changeFooterBg('created');
         },
 
         destroyed() {
             this.changeNavColor('destroyed');
+            this.changeFooterBg('destroyed');
         },
 
         components: {

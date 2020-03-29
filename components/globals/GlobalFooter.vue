@@ -1,16 +1,17 @@
 
 <template>
-  <div class="global-footer">
+  <div class="global-footer" :style="{ backgroundColor: footerBg }">
     {{ footerDatas }}
   </div>
 </template>
 
 <script>
-    import {generatePageData, initApi} from "../../prismic.config";
-    import Prismic from 'prismic-javascript'
-    import PrismicDOM from 'prismic-dom'
+    import { mapState } from 'vuex';
 
     export default {
+
+        computed: mapState(['footerBg']),
+
         props: [
             'footerDatas',
         ]
@@ -21,8 +22,7 @@
   .global-footer {
     font-size: 20px;
     text-align: center;
-    max-width: 80%;
-    margin: 140px auto 45px auto;
+    padding: 140px 10% 45px 10%;
     line-height: 30px;
   }
 </style>
