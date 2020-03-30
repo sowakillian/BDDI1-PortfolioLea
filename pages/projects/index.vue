@@ -176,6 +176,9 @@
       margin-top: 0;
 
       li {
+        &:first-of-type {
+          margin-top: 150px !important;
+        }
         width: 100%;
         margin-top: 300px;
         &:nth-of-type(odd) {
