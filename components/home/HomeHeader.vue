@@ -150,6 +150,10 @@
       }
     }
 
+    @media all and (max-height: 1425px) {
+      height: auto;
+    }
+
     @media all and (max-width: 980px) {
       padding: 0;
       height: auto;
