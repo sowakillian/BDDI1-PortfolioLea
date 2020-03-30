@@ -18,6 +18,7 @@
     "core-js": "^2.6.10",
     "jquery": "^3.4.1",
     "nuxt": "^2.0.0",
+    "nuxt-lazy-load": "^1.1.8",
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.1.5",
     "vue-concise-slider": "^3.4.4",

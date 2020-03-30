@@ -83,7 +83,7 @@
     margin-top: -120px;
     display: flex;
     align-items: center;
-    background-color: slategray;
+    background-color: black;
     background-image: url("../../assets/images/projects/labfive-bg.jpg");
     background-size: cover;
     background-position: center center;
@@ -154,7 +154,7 @@
         text-align: center;
         margin: 0 auto;
         transform: translate3d(0px, 0px, 0px) !important;
-        
+
         &-year {
           overflow: visible;
         }
@@ -162,7 +162,7 @@
           overflow: visible;
           font-size: 40px;
           height: auto;
-          
+
           & > * {
             position: relative;
           }
