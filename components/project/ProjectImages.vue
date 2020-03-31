@@ -259,9 +259,14 @@
         &-phonevideo {
           width: 400px;
           height: 800px;
-          background-color: black;
           transform: translateY(160px);
           video {
+            max-width: 100%;
+          }
+        }
+        &-imgright2 {
+          max-width: 40%;
+          img {
             max-width: 100%;
           }
         }
@@ -311,6 +316,12 @@
         }
       }
 
+      &-labfive {
+        &-bottom {
+          justify-content: space-between;
+        }
+      }
+
       &-icecream {
         margin-top: 50px;
       }
@@ -333,6 +344,22 @@
         }
       }
 
+      &-phonemockup {
+        transform: translateY(-150px);
+      }
+
+      &-labfive {
+        &-bottom {
+          justify-content: center;
+          &-imgright2 {
+            display: none;
+          }
+          &-phonevideo {
+            transform: translateY(20px);
+          }
+        }
+      }
+
       &-icecream {
         margin-top: 0px;
       }
@@ -346,6 +373,10 @@
         margin-top: -260px;
         transform: translateX(0);
       }
+
+      &-icecream {
+        transform: translateY(-100px);
+      }
       &-phonemockup {
         position: static;
         transform: translateY(-250px);
@@ -354,6 +385,13 @@
         left: 0;
         &-img {
 
+          &-icecream {
+            transform: translateY(150px);
+
+            .project-images-phonemockup-img-skills {
+              bottom: 30%;
+            }
+          }
           &-desk {
             .project-images-phonemockup-img-skills {
               transform: translateX(-50%);
@@ -361,11 +399,13 @@
           }
 
           &-skills {
-            font-size: 22px;
+            font-size: 18px;
             transform: translateX(-50%);
             left: 50%;
             bottom: 0;
             top: initial;
+
+
           }
 
         }
@@ -381,10 +421,27 @@
           display: none;
         }
       }
+
+      &-icecream {
+        flex-direction: column;
+        transform: translateY(-200px);
+
+        &-video {
+          width: 100%;
+          margin-bottom: 32px;
+        }
+      }
       &-phonemockup {
+        transform: translateY(-200px);
+
         &-img {
+
+          &-icecream {
+            transform: translateY(10px);
+          }
           &-skills {
-            font-size: 16px;
+            font-size: 12px;
+            display: block;
           }
         }
       }
