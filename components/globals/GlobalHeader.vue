@@ -45,6 +45,7 @@
     position: fixed;
     z-index: 2;
     padding: 60px 80px 0 80px;
+    mix-blend-mode: difference;
 
 
 

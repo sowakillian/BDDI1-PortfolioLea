@@ -162,13 +162,7 @@ export default {
   render: {
     bundleRenderer: {
       shouldPreload: (file, type) => {
-        if (type === 'script' || type === 'style') {
-          return true
-        }
-        if (type === 'font') {
-          // only preload woff2 fonts
-          return /\.ttf$/.test(file)
-        }
+        return ['script', 'style', 'font'].includes(type)
       }
     }
   }
