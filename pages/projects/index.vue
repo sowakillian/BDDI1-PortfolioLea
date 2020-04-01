@@ -115,6 +115,10 @@
         max-width: 640px;
         pointer-events: none;
 
+        &:hover {
+          cursor: none;
+        }
+
         &-desk {
           transform: translate(-50%, -20%) rotate(-23deg);
         }
