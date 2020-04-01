@@ -102,7 +102,8 @@
         letter-spacing: calc((200 / 1000) * 1em);
         font-size: 30px;
         color: #FF4E50;
-        font-family: 'GTWalsheim-Regular';
+        font-family: 'GTWalsheim-Regular', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, 'Helvetica Neue', Arial, sans-serif;
         width: 100%;
         text-align: right;
         padding-right: 70px;
