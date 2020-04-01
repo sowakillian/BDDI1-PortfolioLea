@@ -154,7 +154,7 @@
     @media all and (max-height: 1425px) {
       height: auto;
       &-content {
-        padding-top: 20px;
+        padding-top: 50px;
       }
     }
 
