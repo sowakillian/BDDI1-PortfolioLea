@@ -10,7 +10,7 @@
     </div>
     <div v-if="template === 'evenement'" class="project-images-levenement">
       <div class="project-images-levenement-video">
-        <video autoplay loop src="~/assets/images/projects/video-levenement-c.mov"></video>
+        <video autoplay loop src="https://dropclothes.com/portfolio-lea/videos/video-levenement-c.mov"></video>
       </div>
       <div class="project-images-levenement-images">
         <img :src="imgright1"/>
@@ -20,7 +20,7 @@
 
     <div v-if="template === 'icecream'" class="project-images-icecream">
       <div class="project-images-icecream-video" >
-        <video autoplay loop src="~/assets/images/projects/video-icecream-c.mp4"></video>
+        <video autoplay loop src="https://dropclothes.com/portfolio-lea/videos/video-icecream-c.mp4"></video>
       </div>
       <div class="project-images-icecream-images">
         <img :src="imgright1"/>
@@ -35,7 +35,7 @@
 
       <div class="project-images-labfive-bottom">
         <div class="project-images-labfive-bottom-phonevideo">
-          <video autoplay loop src="~/assets/images/projects/video-labfive-c.mp4"></video>
+          <video autoplay loop src="https://dropclothes.com/portfolio-lea/videos/video-labfive-c.mp4"></video>
         </div>
         <div class="project-images-labfive-bottom-imgright2">
           <img :src="imgright2"/>
@@ -55,7 +55,7 @@
 
     <div v-if="template === 'millet'" class="project-images-millet">
       <div class="project-images-millet-video" >
-        <video autoplay loop src="~/assets/images/projects/video-millet-c.mov"></video>
+        <video autoplay loop src="https://dropclothes.com/portfolio-lea/videos/video-millet-c.mov"></video>
       </div>
 
       <div class="project-images-millet-img">
@@ -65,7 +65,7 @@
 
     <div v-if="template === 'spacex'" class="project-images-spacex">
       <div class="project-images-spacex-video" >
-        <video autoplay loop src="~/assets/images/projects/video-spacex-c.mov"></video>
+        <video autoplay loop src="https://dropclothes.com/portfolio-lea/videos/video-spacex-c.mov"></video>
       </div>
     </div>
 
@@ -307,6 +307,28 @@
     }
 
     @media all and (max-width: 1280px) {
+      &-levenement {
+        flex-direction: column;
+        margin-top: 20px;
+        &-images {
+          flex-direction: row;
+          &-images {
+            display: flex;
+            justify-content: space-between;
+          }
+          img {
+            width: 45%;
+            height: auto;
+            &:last-of-type {
+              width: 80%;
+            }
+          }
+        }
+        &-video {
+          margin-right: 0;
+          margin-bottom: 32px;
+        }
+      }
       &-millet {
         &-video {
           margin-top: 60px;
@@ -368,10 +390,17 @@
     @media all and (max-width: 767px) {
       display: block;
       margin-top: 100px;
+      margin-bottom: 30px;
       &-deskmockup {
         width: 100%;
         margin-top: -260px;
         transform: translateX(0);
+      }
+
+      &-millet {
+        &-video {
+          transform: translateY(-50px);
+        }
       }
 
       &-icecream {
@@ -393,6 +422,7 @@
             }
           }
           &-desk {
+            transform: translateY(190px);
             .project-images-phonemockup-img-skills {
               transform: translateX(-50%);
             }
@@ -422,6 +452,13 @@
         }
       }
 
+      &-millet {
+        &-video {
+          transform: translateY(-100px);
+        }
+      }
+
+
       &-icecream {
         flex-direction: column;
         transform: translateY(-200px);
@@ -435,6 +472,10 @@
         transform: translateY(-200px);
 
         &-img {
+
+          &-desk {
+            transform: translateY(40px);
+          }
 
           &-icecream {
             transform: translateY(10px);

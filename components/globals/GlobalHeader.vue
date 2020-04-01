@@ -4,8 +4,8 @@
     <div class="nav-logo" :style="{ color: navColor}"><nuxt-link to="/">//</nuxt-link></div>
     <ul class="nav-list" :style="{ color: navColor }">
       <li><nuxt-link to="/projects">projets</nuxt-link></li>
-      <li><nuxt-link :to="{ path: '/',hash:'#lea'}" v-smooth-scroll>/éa</nuxt-link></li>
-      <li><nuxt-link :to="{ path: '/',hash:'#contact'}" v-smooth-scroll>contact</nuxt-link></li>
+      <li><nuxt-link :to="{ path: '/',hash:'#lea'}">/éa</nuxt-link></li>
+      <li><nuxt-link :to="{ path: '/',hash:'#contact'}">contact</nuxt-link></li>
     </ul>
     <div class="mobile-nav"  id="menuToggle" @click="isMobileMenuActive = !isMobileMenuActive">
       <input type="checkbox" />
