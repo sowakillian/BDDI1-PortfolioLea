@@ -13,8 +13,19 @@ import axios from 'axios'
       <div class="project-description-title" :style="{ color: `${color}` }">
         solution
       </div>
-      <div v-html="solution" class="project-description-text">
-
+      <div class="project-description-text">
+        <p v-html="solution"></p>
+        <div v-if="projectlink_text" class="project-description-text-more">
+          <svg xmlns="http://www.w3.org/2000/svg" width="51.62" height="35.679" viewBox="0 0 51.62 35.679">
+            <g id="Calque_2" data-name="Calque 2" transform="translate(51.62 33.364) rotate(180)">
+              <g id="Calque_1" data-name="Calque 1" transform="translate(0 0)">
+                <path id="Tracé_1" data-name="Tracé 1" d="M43.89,1.54,62.25,16.659,43.89,32.641" transform="translate(-13.63 -1.54)" fill="none" :stroke="`${color}`" stroke-linejoin="round" stroke-width="6"/>
+                <line id="Ligne_16" data-name="Ligne 16" x1="48.62" transform="translate(0 15.202)" fill="none" :stroke="`${color}`" stroke-miterlimit="10" stroke-width="6"/>
+              </g>
+            </g>
+          </svg>
+          <p v-html="projectlink_text" :style="{ color: `${color}` }"></p>
+        </div>
       </div>
     </div>
   </div>
@@ -25,7 +36,8 @@ import axios from 'axios'
         props: [
             'pitch',
             'solution',
-            'color'
+            'color',
+            'projectlink_text',
         ]
     };
 </script>
@@ -57,10 +69,21 @@ import axios from 'axios'
       &-marginTop {
         margin-top: 20px;
       }
+
+      &-more {
+        margin-top: 40px;
+        svg {
+          transform: rotate(180deg);
+          width: 48px;
+          margin-right: 24px;
+        }
+        display: flex;
+        font-family: GTWalsheim-Bold;
+      }
     }
 
     &-solution {
-      margin-top: 95px;
+      margin-top: 55px;
       width: 40%;
     }
 

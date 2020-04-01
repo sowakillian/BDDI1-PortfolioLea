@@ -57,6 +57,7 @@ export const generatePageData = (documentType, data) => {
         deskmockup: data.deskmockup.url,
         imgright1: data.imgright1.url,
         imgright2: data.imgright2.url,
+        projectlink_text: PrismicDOM.RichText.asHtml(data.projectlink_text),
         template: data.template,
       }
   }

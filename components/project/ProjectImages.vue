@@ -49,7 +49,7 @@
       </div>
 
       <div class="project-images-lecerf-video">
-
+        <video autoplay loop src="https://dropclothes.com/portfolio-lea/videos/video-lecerf-c.mov"></video>
       </div>
     </div>
 
@@ -314,6 +314,7 @@
         flex-direction: column;
         margin-top: 20px;
         &-images {
+          display: none;
           flex-direction: row;
           &-images {
             display: flex;
