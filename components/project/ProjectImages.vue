@@ -1,7 +1,7 @@
 <template>
   <div class="project-images" :style="{ backgroundColor: color }">
     <div class="project-images-phonemockup">
-      <span v-bind:class="{'project-images-phonemockup-img-desk':(phonemockupisdesk), 'project-images-phonemockup-img-icecream':(template === 'icecream')}" class="project-images-phonemockup-img">
+      <span v-bind:class="{'project-images-phonemockup-img-desk':(phonemockupisdesk), 'project-images-phonemockup-img-spacex':(template === 'spacex'), 'project-images-phonemockup-img-icecream':(template === 'icecream')}" class="project-images-phonemockup-img">
         <img :src="phonemockup"/>
         <span class="project-images-phonemockup-img-skills">
           {{ skills }}
@@ -307,6 +307,9 @@
     }
 
     @media all and (max-width: 1280px) {
+      &-spacex {
+        margin-top: 30px;
+      }
       &-levenement {
         flex-direction: column;
         margin-top: 20px;
@@ -368,6 +371,12 @@
 
       &-phonemockup {
         transform: translateY(-150px);
+
+        &-img {
+          &-spacex {
+            transform: translateY(25%);
+          }
+        }
       }
 
       &-labfive {
@@ -395,6 +404,10 @@
         width: 100%;
         margin-top: -260px;
         transform: translateX(0);
+      }
+
+      &-spacex {
+        transform: translateY(-40px);
       }
 
       &-millet {
@@ -444,12 +457,16 @@
 
     @media all and (max-width: 480px) {
       padding-top: 100px;
-      margin-bottom: 80px;
+      margin-bottom: 20px;
 
       &-lecerf {
         &-video {
           display: none;
         }
+      }
+
+      &-spacex {
+        transform: translateY(-100px);
       }
 
       &-millet {
