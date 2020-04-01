@@ -152,6 +152,9 @@
 
     @media all and (max-height: 1425px) {
       height: auto;
+      &-content {
+        padding-top: 20px;
+      }
     }
 
     @media all and (max-width: 980px) {

@@ -101,6 +101,7 @@
       display:flex;
       align-items: center;
       justify-content: center;
+      margin-top: -40px;
 
       &-numbers {
         margin: 0 30px;
@@ -194,6 +195,9 @@
  }
 
   @media all and (max-width: 767px) {
+    &-nav {
+      margin-top: 0;
+    }
     .project-slider {
       height: 600px;
 
