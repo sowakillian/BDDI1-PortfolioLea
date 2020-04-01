@@ -2,7 +2,7 @@
 <template>
   <div class="home-about" id="lea">
     <span class="home-about-marquee">
-      Let's create
+      Let's create Let's create
     </span>
     <h2 v-scroll-reveal ="{
       distance: 0,
