@@ -224,6 +224,20 @@
       }
     }
 
+    @media all and (max-width: 1600px) {
+      &-mail {
+        left: -50px;
+        bottom: -20px;
+        width: 40px;
+
+        img {
+          right: 10px;
+          top: 10px;
+          width: 20px;
+        }
+      }
+    }
+
     @media all and (max-width: 1280px) {
       &-mail {
         display: none;
